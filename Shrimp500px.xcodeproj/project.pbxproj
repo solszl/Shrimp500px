@@ -15,6 +15,7 @@
 		FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */; };
 		FFE9D9BB1C74E97000D5A092 /* Shrimp500pxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9BA1C74E97000D5A092 /* Shrimp500pxTests.swift */; };
 		FFE9D9C61C74E97000D5A092 /* Shrimp500pxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9C51C74E97000D5A092 /* Shrimp500pxUITests.swift */; };
+		FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FFE9D9C11C74E97000D5A092 /* Shrimp500pxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Shrimp500pxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9C51C74E97000D5A092 /* Shrimp500pxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shrimp500pxUITests.swift; sourceTree = "<group>"; };
 		FFE9D9C71C74E97000D5A092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTabBarControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		FFE9D9A41C74E97000D5A092 /* Shrimp500px */ = {
 			isa = PBXGroup;
 			children = (
+				FFE9D9D31C74EDFA00D5A092 /* ViewControllers */,
 				FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */,
 				FFE9D9A71C74E97000D5A092 /* ViewController.swift */,
 				FFE9D9A91C74E97000D5A092 /* Main.storyboard */,
@@ -147,6 +150,22 @@
 				FFE9D9C71C74E97000D5A092 /* Info.plist */,
 			);
 			path = Shrimp500pxUITests;
+			sourceTree = "<group>";
+		};
+		FFE9D9D31C74EDFA00D5A092 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFE9D9D41C74EE0700D5A092 /* TabBar */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FFE9D9D41C74EE0700D5A092 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */,
+			);
+			name = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +355,7 @@
 			files = (
 				FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
+				FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

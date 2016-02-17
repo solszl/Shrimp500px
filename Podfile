@@ -3,3 +3,4 @@ use_frameworks!
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'SnapKit'
+pod 'XCGLogger', '~> 3.2'
