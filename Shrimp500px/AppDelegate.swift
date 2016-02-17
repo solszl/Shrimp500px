@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import XCGLogger
+
+let log = XCGLogger.defaultInstance()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // 配置日志
+        setupLogger()
         return true
     }
 
@@ -42,5 +45,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    private func setupLogger() {
+        // setup log properties
+        log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: .Debug)
+        
+        log.xcodeColorsEnabled = true
+        log.xcodeColors = [
+            .Verbose: .lightGrey,
+            .Debug: .darkGrey,
+            .Info: .darkGreen,
+            .Warning: .orange,
+            .Error: .red,
+            .Severe: .whiteOnRed
+        ]
+    }
 }
 
