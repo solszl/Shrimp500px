@@ -103,12 +103,12 @@
 		FFE9D9991C74E97000D5A092 = {
 			isa = PBXGroup;
 			children = (
+				F0EEE17065E973DD683E770B /* Frameworks */,
+				D3809844FCB183704362DDE0 /* Pods */,
+				FFE9D9A31C74E97000D5A092 /* Products */,
 				FFE9D9A41C74E97000D5A092 /* Shrimp500px */,
 				FFE9D9B91C74E97000D5A092 /* Shrimp500pxTests */,
 				FFE9D9C41C74E97000D5A092 /* Shrimp500pxUITests */,
-				FFE9D9A31C74E97000D5A092 /* Products */,
-				D3809844FCB183704362DDE0 /* Pods */,
-				F0EEE17065E973DD683E770B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,11 +128,11 @@
 				FFE9D9D71C74FD5500D5A092 /* Extension */,
 				FFE9D9D31C74EDFA00D5A092 /* ViewControllers */,
 				FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */,
-				FFE9D9A71C74E97000D5A092 /* ViewController.swift */,
-				FFE9D9A91C74E97000D5A092 /* Main.storyboard */,
 				FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */,
-				FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */,
 				FFE9D9B11C74E97000D5A092 /* Info.plist */,
+				FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */,
+				FFE9D9A91C74E97000D5A092 /* Main.storyboard */,
+				FFE9D9A71C74E97000D5A092 /* ViewController.swift */,
 			);
 			path = Shrimp500px;
 			sourceTree = "<group>";
@@ -140,8 +140,8 @@
 		FFE9D9B91C74E97000D5A092 /* Shrimp500pxTests */ = {
 			isa = PBXGroup;
 			children = (
-				FFE9D9BA1C74E97000D5A092 /* Shrimp500pxTests.swift */,
 				FFE9D9BC1C74E97000D5A092 /* Info.plist */,
+				FFE9D9BA1C74E97000D5A092 /* Shrimp500pxTests.swift */,
 			);
 			path = Shrimp500pxTests;
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 		FFE9D9C41C74E97000D5A092 /* Shrimp500pxUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FFE9D9C51C74E97000D5A092 /* Shrimp500pxUITests.swift */,
 				FFE9D9C71C74E97000D5A092 /* Info.plist */,
+				FFE9D9C51C74E97000D5A092 /* Shrimp500pxUITests.swift */,
 			);
 			path = Shrimp500pxUITests;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			children = (
 				FFE9D9D41C74EE0700D5A092 /* TabBar */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FFE9D9D41C74EE0700D5A092 /* TabBar */ = {
@@ -168,7 +168,7 @@
 			children = (
 				FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */,
 			);
-			name = TabBar;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		FFE9D9D71C74FD5500D5A092 /* Extension */ = {
@@ -176,7 +176,7 @@
 			children = (
 				FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */,
 			);
-			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +409,7 @@
 				FFE9D9AA1C74E97000D5A092 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */ = {
@@ -417,6 +418,7 @@
 				FFE9D9AF1C74E97000D5A092 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
