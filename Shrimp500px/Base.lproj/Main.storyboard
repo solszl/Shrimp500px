@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LFM-dK-kTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LFM-dK-kTP">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Search-->
@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr9-vS-bNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="249"/>
+            <point key="canvasLocation" x="732" y="-3"/>
         </scene>
         <!--Profile-->
         <scene sceneID="NgF-mR-lZP">
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3g-WZ-pKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="956"/>
+            <point key="canvasLocation" x="680" y="946"/>
         </scene>
         <!--Notification-->
         <scene sceneID="via-Lz-Iqr">
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIJ-kd-KYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="956"/>
+            <point key="canvasLocation" x="-310" y="934"/>
         </scene>
         <!--Upload-->
         <scene sceneID="ahV-bI-Q2S">
@@ -82,12 +82,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9J-fL-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="961"/>
+            <point key="canvasLocation" x="-1186" y="899"/>
         </scene>
         <!--Home-->
         <scene sceneID="Hfh-Rt-W7E">
             <objects>
-                <viewController id="fL9-C2-Kzd" sceneMemberID="viewController">
+                <viewController id="fL9-C2-Kzd" customClass="HomeViewController" customModule="Shrimp500px" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kVa-CH-NLq"/>
                         <viewControllerLayoutGuide type="bottom" id="PeS-Lw-WYQ"/>
@@ -95,13 +95,41 @@
                     <view key="view" contentMode="scaleToFill" id="dZn-NL-NjE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-um-aqZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZdI-3n-5hu">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bdA-MT-XhA">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PeS-Lw-WYQ" firstAttribute="top" secondItem="O6C-um-aqZ" secondAttribute="bottom" id="68e-Ab-9oP"/>
+                            <constraint firstAttribute="trailing" secondItem="O6C-um-aqZ" secondAttribute="trailing" id="6Se-33-GvT"/>
+                            <constraint firstItem="O6C-um-aqZ" firstAttribute="top" secondItem="dZn-NL-NjE" secondAttribute="top" id="CTO-tF-O9G"/>
+                            <constraint firstItem="O6C-um-aqZ" firstAttribute="leading" secondItem="dZn-NL-NjE" secondAttribute="leading" id="mj1-6t-dSV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="m9m-nX-BLv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZB-ZI-yHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="-418"/>
+            <point key="canvasLocation" x="732" y="-656"/>
         </scene>
         <!--Tab Bar Controller View Controller-->
         <scene sceneID="dMY-6P-Yeq">
@@ -122,7 +150,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wja-eT-hn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-143"/>
+            <point key="canvasLocation" x="-292" y="-287"/>
         </scene>
     </scenes>
 </document>

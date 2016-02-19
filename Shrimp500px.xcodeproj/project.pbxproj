@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2EFFD7B5166758ACC786B628 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA040CD771F1DCDF7475247 /* Pods.framework */; };
+		FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */; };
+		FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B0111C77572600E5BF08 /* HomeViewController.swift */; };
+		FF57B0181C77713400E5BF08 /* RecommendCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B0161C77713400E5BF08 /* RecommendCellCollectionViewCell.swift */; };
+		FF57B0191C77713400E5BF08 /* RecommendCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B0171C77713400E5BF08 /* RecommendCellCollectionViewCell.xib */; };
+		FF57B01D1C7772F300E5BF08 /* WorkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01B1C7772F300E5BF08 /* WorkCell.swift */; };
+		FF57B01E1C7772F300E5BF08 /* WorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B01C1C7772F300E5BF08 /* WorkCell.xib */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
 		FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A71C74E97000D5A092 /* ViewController.swift */; };
 		FFE9D9AB1C74E97000D5A092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9A91C74E97000D5A092 /* Main.storyboard */; };
@@ -40,6 +46,12 @@
 		10AE8742BE55E6A922BD578F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C5DC997CCDEE08EBC7D3C0B0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ECA040CD771F1DCDF7475247 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FF57B0111C77572600E5BF08 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF57B0161C77713400E5BF08 /* RecommendCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF57B0171C77713400E5BF08 /* RecommendCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF57B01B1C7772F300E5BF08 /* WorkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkCell.swift; sourceTree = "<group>"; };
+		FF57B01C1C7772F300E5BF08 /* WorkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkCell.xib; sourceTree = "<group>"; };
 		FFE9D9A21C74E97000D5A092 /* Shrimp500px.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp500px.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE9D9A71C74E97000D5A092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +112,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF57B00D1C77567000E5BF08 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF57B0111C77572600E5BF08 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF57B00E1C7756A400E5BF08 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FF57B0131C7769CF00E5BF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF57B0141C7769DB00E5BF08 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF57B0141C7769DB00E5BF08 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF57B0151C7770C200E5BF08 /* Recommend */,
+				FF57B01A1C7772D300E5BF08 /* Work */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FF57B0151C7770C200E5BF08 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				FF57B0161C77713400E5BF08 /* RecommendCellCollectionViewCell.swift */,
+				FF57B0171C77713400E5BF08 /* RecommendCellCollectionViewCell.xib */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		FF57B01A1C7772D300E5BF08 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				FF57B01B1C7772F300E5BF08 /* WorkCell.swift */,
+				FF57B01C1C7772F300E5BF08 /* WorkCell.xib */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
 		FFE9D9991C74E97000D5A092 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +190,7 @@
 			children = (
 				FFE9D9D71C74FD5500D5A092 /* Extension */,
 				FFE9D9D31C74EDFA00D5A092 /* ViewControllers */,
+				FF57B0131C7769CF00E5BF08 /* Views */,
 				FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */,
 				FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */,
 				FFE9D9B11C74E97000D5A092 /* Info.plist */,
@@ -158,6 +222,8 @@
 		FFE9D9D31C74EDFA00D5A092 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF57B00E1C7756A400E5BF08 /* Base */,
+				FF57B00D1C77567000E5BF08 /* Home */,
 				FFE9D9D41C74EE0700D5A092 /* TabBar */,
 			);
 			path = ViewControllers;
@@ -290,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */,
+				FF57B01E1C7772F300E5BF08 /* WorkCell.xib in Resources */,
+				FF57B0191C77713400E5BF08 /* RecommendCellCollectionViewCell.xib in Resources */,
 				FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */,
 				FFE9D9AB1C74E97000D5A092 /* Main.storyboard in Resources */,
 			);
@@ -364,10 +432,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
 				FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */,
+				FF57B0181C77713400E5BF08 /* RecommendCellCollectionViewCell.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
+				FF57B01D1C7772F300E5BF08 /* WorkCell.swift in Sources */,
 				FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */,
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
+				FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
