@@ -15,6 +15,7 @@
 		FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */; };
 		FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B0201C7773D400E5BF08 /* RecommendCell.xib */; };
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
+		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
 		FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A71C74E97000D5A092 /* ViewController.swift */; };
 		FFE9D9AB1C74E97000D5A092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9A91C74E97000D5A092 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		FF57B0201C7773D400E5BF08 /* RecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCell.xib; sourceTree = "<group>"; };
 		FF765CB21C7822BD00A54A77 /* NibNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
+		FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		FFE9D9A21C74E97000D5A092 /* Shrimp500px.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp500px.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE9D9A71C74E97000D5A092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		FF765CB11C7822A500A54A77 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */,
 				FF765CB21C7822BD00A54A77 /* NibNames.swift */,
 			);
 			path = Constants;
@@ -444,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
+				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
 				FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */,

@@ -21,11 +21,11 @@ class HomeViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor.clearColor()
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 50
     }
@@ -39,12 +39,18 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.lblName.text = "ZhenLiang Sun"
         cell.lblMoment.text = "21Mins ago"
         cell.backgroundColor = UIColor.purpleColor()
-        
         return cell
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let size = CGSizeMake(AppConfig.ScreenWidth, 300)
+        
+        return size
     }
 
 }
