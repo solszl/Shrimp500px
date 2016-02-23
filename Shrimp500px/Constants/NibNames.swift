@@ -9,6 +9,8 @@
 import Foundation
 
 class NibNames {
-    static let WorkCell:String = "WorkCell"
+    static let WorkCell:String = "CustomizedCell"//"WorkCell"
+    
+//    static let CustomizedCell:String = "CustomizedCell"
 }
     

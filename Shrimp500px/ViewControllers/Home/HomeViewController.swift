@@ -31,13 +31,20 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(NibNames.WorkCell, forIndexPath: indexPath) as! WorkCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(NibNames.WorkCell, forIndexPath: indexPath) as! CustomizedCell//WorkCell
         
-        let name = "cover" + String(arc4random() % 2 + 1)
+        var name = ""
+        
+        if(arc4random() % 2 == 0) {
+            name = "cover1"
+        } else {
+            name = "avatar"
+        }
+        
         cell.imgCover.image = UIImage(named: name)
         cell.imgAvatar.image = UIImage(named: "avatar")
         cell.lblName.text = "ZhenLiang Sun"
-        cell.lblMoment.text = "21Mins ago"
+//        cell.lblMoment.text = "21Mins ago"
         cell.backgroundColor = UIColor.purpleColor()
         return cell
     }

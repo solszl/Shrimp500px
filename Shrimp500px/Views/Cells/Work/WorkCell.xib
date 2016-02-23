@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-SH-RzK">
-                        <rect key="frame" x="55" y="249" width="86" height="17"/>
+                        <rect key="frame" x="55" y="249" width="218" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                 <constraint firstItem="KNM-kb-5BD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8GA-hh-Ara"/>
                 <constraint firstAttribute="bottom" secondItem="pa8-Bm-l81" secondAttribute="bottom" constant="10" id="B8f-tI-MMD"/>
                 <constraint firstItem="Uq7-SH-RzK" firstAttribute="top" secondItem="pa8-Bm-l81" secondAttribute="top" id="DkT-aQ-5DE"/>
-                <constraint firstItem="7GS-NK-wLq" firstAttribute="leading" secondItem="Uq7-SH-RzK" secondAttribute="trailing" constant="142" id="MkD-II-EJZ"/>
+                <constraint firstItem="7GS-NK-wLq" firstAttribute="leading" secondItem="Uq7-SH-RzK" secondAttribute="trailing" constant="10" id="MkD-II-EJZ"/>
                 <constraint firstItem="WSB-t4-SDw" firstAttribute="bottom" secondItem="pa8-Bm-l81" secondAttribute="bottom" id="UFc-GL-WpC"/>
                 <constraint firstItem="7GS-NK-wLq" firstAttribute="leading" secondItem="WSB-t4-SDw" secondAttribute="trailing" constant="142" id="VdG-jX-7sZ"/>
                 <constraint firstItem="KNM-kb-5BD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b69-1c-9WP"/>

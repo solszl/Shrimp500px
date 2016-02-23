@@ -15,7 +15,10 @@
 		FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */; };
 		FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B0201C7773D400E5BF08 /* RecommendCell.xib */; };
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
+		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
 		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
+		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
+		FFBC11B21C7CABC40040D53E /* CustomizedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBC11B01C7CABC40040D53E /* CustomizedCell.xib */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
 		FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A71C74E97000D5A092 /* ViewController.swift */; };
 		FFE9D9AB1C74E97000D5A092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9A91C74E97000D5A092 /* Main.storyboard */; };
@@ -55,7 +58,10 @@
 		FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		FF57B0201C7773D400E5BF08 /* RecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCell.xib; sourceTree = "<group>"; };
 		FF765CB21C7822BD00A54A77 /* NibNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
+		FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLayout.swift; sourceTree = "<group>"; };
 		FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedCell.swift; sourceTree = "<group>"; };
+		FFBC11B01C7CABC40040D53E /* CustomizedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizedCell.xib; sourceTree = "<group>"; };
 		FFE9D9A21C74E97000D5A092 /* Shrimp500px.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp500px.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE9D9A71C74E97000D5A092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 		FF57B00D1C77567000E5BF08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */,
 				FF57B0111C77572600E5BF08 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -161,6 +168,8 @@
 		FF57B01A1C7772D300E5BF08 /* Work */ = {
 			isa = PBXGroup;
 			children = (
+				FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */,
+				FFBC11B01C7CABC40040D53E /* CustomizedCell.xib */,
 				FF57B01B1C7772F300E5BF08 /* WorkCell.swift */,
 				FF57B01C1C7772F300E5BF08 /* WorkCell.xib */,
 			);
@@ -369,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBC11B21C7CABC40040D53E /* CustomizedCell.xib in Resources */,
 				FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */,
 				FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */,
 				FF57B01E1C7772F300E5BF08 /* WorkCell.xib in Resources */,
@@ -448,7 +458,9 @@
 			files = (
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
+				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
+				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
 				FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
