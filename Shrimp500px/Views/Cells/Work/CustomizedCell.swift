@@ -13,13 +13,8 @@ class CustomizedCell: UICollectionViewCell {
 
     @IBOutlet weak var imgCover: UIImageView!
     
-    @IBOutlet weak var imgAvatar: UIImageView!
     
-    @IBOutlet weak var lblName: UILabel!
-    
-    @IBOutlet weak var lblTimeSpan: UILabel!
-    
-    @IBOutlet weak var btnGood: UIButton!
+    var cover: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,27 +22,15 @@ class CustomizedCell: UICollectionViewCell {
         
         makeUI()
     }
-
-    @IBAction func btnDetailClick(sender: AnyObject) {
-    }
-    
-    @IBAction func btnShareClick(sender: AnyObject) {
-    }
-    
-    @IBAction func btnGoodClick(sender: AnyObject) {
-    }
     
     // 构建UI
     private func makeUI() {
-        // 最上面的图
-        imgCover.snp_makeConstraints { (make) -> Void in
-            make.leading.top.trailing.equalTo(self).offset(0)
-        }
         
-        imgAvatar.snp_makeConstraints { (make) -> Void in
-            make.leading.equalTo(self).offset(10)
-            make.top.equalTo(imgCover).offset(10)
-            make.size.equalTo(CGSizeMake(40, 40))
-        }
+        cover = UIImageView()
+        self.addSubview(cover)
+        // 最上面的图
+//        imgCover.snp_makeConstraints { (make) -> Void in
+//            make.size.equalTo(CGSizeMake(80, 80))
+//        }
     }
 }

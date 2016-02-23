@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 
+
+let ScreenWidth = UIScreen.mainScreen().bounds.width
+
+let ScreenHeight = UIScreen.mainScreen().bounds.height
+
+let ScreenBounds = UIScreen.mainScreen().bounds
+
+
 class AppConfig {
-    static let ScreenWidth = UIScreen.mainScreen().bounds.width
-    
-    static let ScreenHeight = UIScreen.mainScreen().bounds.height
 }

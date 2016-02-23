@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EFFD7B5166758ACC786B628 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA040CD771F1DCDF7475247 /* Pods.framework */; };
+		FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2481601C7CD7E800F20344 /* SplashViewController.swift */; };
+		FF2481641C7CD8A400F20344 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2481631C7CD8A400F20344 /* MainTabBarViewController.swift */; };
 		FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */; };
 		FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B0111C77572600E5BF08 /* HomeViewController.swift */; };
 		FF57B01D1C7772F300E5BF08 /* WorkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01B1C7772F300E5BF08 /* WorkCell.swift */; };
@@ -21,7 +23,6 @@
 		FFBC11B21C7CABC40040D53E /* CustomizedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBC11B01C7CABC40040D53E /* CustomizedCell.xib */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
 		FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A71C74E97000D5A092 /* ViewController.swift */; };
-		FFE9D9AB1C74E97000D5A092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9A91C74E97000D5A092 /* Main.storyboard */; };
 		FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */; };
 		FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */; };
 		FFE9D9BB1C74E97000D5A092 /* Shrimp500pxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9BA1C74E97000D5A092 /* Shrimp500pxTests.swift */; };
@@ -51,6 +52,8 @@
 		10AE8742BE55E6A922BD578F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C5DC997CCDEE08EBC7D3C0B0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ECA040CD771F1DCDF7475247 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2481601C7CD7E800F20344 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		FF2481631C7CD8A400F20344 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FF57B0111C77572600E5BF08 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF57B01B1C7772F300E5BF08 /* WorkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkCell.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		FFE9D9A21C74E97000D5A092 /* Shrimp500px.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp500px.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE9D9A71C74E97000D5A092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFE9D9AA1C74E97000D5A092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE9D9AF1C74E97000D5A092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFE9D9B11C74E97000D5A092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +122,22 @@
 				ECA040CD771F1DCDF7475247 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF24815F1C7CD7AD00F20344 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FF2481601C7CD7E800F20344 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		FF2481621C7CD87800F20344 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FF2481631C7CD8A400F20344 /* MainTabBarViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		FF57B00D1C77567000E5BF08 /* Home */ = {
@@ -218,7 +236,6 @@
 				FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */,
 				FFE9D9B11C74E97000D5A092 /* Info.plist */,
 				FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */,
-				FFE9D9A91C74E97000D5A092 /* Main.storyboard */,
 				FFE9D9A71C74E97000D5A092 /* ViewController.swift */,
 			);
 			path = Shrimp500px;
@@ -247,6 +264,8 @@
 			children = (
 				FF57B00E1C7756A400E5BF08 /* Base */,
 				FF57B00D1C77567000E5BF08 /* Home */,
+				FF2481621C7CD87800F20344 /* Main */,
+				FF24815F1C7CD7AD00F20344 /* Splash */,
 				FFE9D9D41C74EE0700D5A092 /* TabBar */,
 			);
 			path = ViewControllers;
@@ -383,7 +402,6 @@
 				FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */,
 				FF57B01E1C7772F300E5BF08 /* WorkCell.xib in Resources */,
 				FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */,
-				FFE9D9AB1C74E97000D5A092 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,9 +477,11 @@
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
+				FF2481641C7CD8A400F20344 /* MainTabBarViewController.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
+				FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */,
 				FFE9D9A81C74E97000D5A092 /* ViewController.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
 				FF57B01D1C7772F300E5BF08 /* WorkCell.swift in Sources */,
@@ -503,15 +523,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFE9D9A91C74E97000D5A092 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFE9D9AA1C74E97000D5A092 /* Base */,
-			);
-			name = Main.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
 		FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

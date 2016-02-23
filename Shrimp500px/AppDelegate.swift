@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        
+        setKeyWindow()
+        
         // 配置日志
         setupLogger()
+        
+        
         return true
     }
 
@@ -45,8 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    // 配置logger
     private func setupLogger() {
-        // setup log properties
         log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: .Debug)
         
         log.xcodeColorsEnabled = true
@@ -58,6 +63,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .Error: .red,
             .Severe: .whiteOnRed
         ]
+    }
+    
+    private func setKeyWindow() {
+        self.window = UIWindow(frame: ScreenBounds)
+        
+        self.window?.rootViewController = showSplash()
+        
+        self.window?.makeKeyAndVisible()
+    }
+    
+    private func showSplash() -> UIViewController {
+        // 判断版本号 跳转 起始页或者主页
+//        SplashViewController()
+        
+        return MainTabBarViewController()
+        
     }
 }
 

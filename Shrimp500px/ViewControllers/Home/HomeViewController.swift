@@ -10,11 +10,12 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        collectionView = UICollectionView(frame: ScreenBounds, collectionViewLayout: UICollectionViewLayout())
         // 注册xib组件
         collectionView.registerNib(UINib(nibName: NibNames.WorkCell, bundle: nil), forCellWithReuseIdentifier: NibNames.WorkCell)
         
@@ -27,7 +28,7 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 50
+        return 10
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
@@ -41,9 +42,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             name = "avatar"
         }
         
-        cell.imgCover.image = UIImage(named: name)
-        cell.imgAvatar.image = UIImage(named: "avatar")
-        cell.lblName.text = "ZhenLiang Sun"
+//        cell.imgCover.image = UIImage(named: name)
+        cell.cover.image = UIImage(named: name)
+//        cell.imgAvatar.image = UIImage(named: "avatar")
+//        cell.lblName.text = "ZhenLiang Sun"
 //        cell.lblMoment.text = "21Mins ago"
         cell.backgroundColor = UIColor.purpleColor()
         return cell
@@ -55,7 +57,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = CGSizeMake(AppConfig.ScreenWidth, 300)
+        let size = CGSizeMake(ScreenWidth, 300)
         
         return size
     }
