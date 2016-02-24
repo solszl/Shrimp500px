@@ -10,6 +10,10 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    deinit {
+        log.info("deinit Windows")
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         

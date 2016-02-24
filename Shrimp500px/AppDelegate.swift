@@ -16,13 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        
-        setKeyWindow()
-        
         // 配置日志
         setupLogger()
-        
+
+        setKeyWindow()
         
         return true
     }

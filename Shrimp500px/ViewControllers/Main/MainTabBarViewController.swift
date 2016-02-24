@@ -24,7 +24,7 @@ class MainTabBarViewController: UITabBarController {
         // 首页
         addOneChlildVc(HomeViewController(), title: "Home1", imageName: "", selectedImageName: "")
         // 探索发现
-        addOneChlildVc(HomeViewController(), title: "Find", imageName: "", selectedImageName: "")
+        addOneChlildVc(DiscoverViewController(), title: "Find", imageName: "", selectedImageName: "")
         // 照相上传
         addOneChlildVc(HomeViewController(), title: "Take", imageName: "", selectedImageName: "")
         // 消息

@@ -7,15 +7,15 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: BaseViewController {
-
-    var collectionView: UICollectionView!
     
+    var collectionView: UICollectionView!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        log.warning("step 2")
         
-        collectionView = UICollectionView(frame: ScreenBounds, collectionViewLayout: UICollectionViewLayout())
         // 注册xib组件
         collectionView.registerNib(UINib(nibName: NibNames.WorkCell, bundle: nil), forCellWithReuseIdentifier: NibNames.WorkCell)
         
@@ -23,6 +23,17 @@ class HomeViewController: BaseViewController {
         collectionView.delegate = self
         
         collectionView.backgroundColor = UIColor.clearColor()
+        collectionView.snp_makeConstraints { make in
+//            make.edges.equalTo(self.view)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        log.warning("step 1")
+        collectionView = UICollectionView(frame: ScreenBounds, collectionViewLayout: UICollectionViewLayout())
+        self.view.addSubview(collectionView)
     }
 }
 
@@ -42,11 +53,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             name = "avatar"
         }
         
-//        cell.imgCover.image = UIImage(named: name)
         cell.cover.image = UIImage(named: name)
-//        cell.imgAvatar.image = UIImage(named: "avatar")
-//        cell.lblName.text = "ZhenLiang Sun"
-//        cell.lblMoment.text = "21Mins ago"
         cell.backgroundColor = UIColor.purpleColor()
         return cell
     }
@@ -61,5 +68,5 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         return size
     }
-
+    
 }
