@@ -35,7 +35,9 @@ class MainTabBarViewController: UITabBarController {
     
     private func addOneChlildVc(childVc: UIViewController, title: String, imageName: String, selectedImageName: String) {
         childVc.title = title
-        childVc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
+//        childVc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
+        
+        childVc.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
         childVc.view.backgroundColor = UIColor.whiteColor()
         addChildViewController(childVc)
     }

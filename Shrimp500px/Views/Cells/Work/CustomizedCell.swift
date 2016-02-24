@@ -10,10 +10,6 @@ import UIKit
 import SnapKit
 
 class CustomizedCell: UICollectionViewCell {
-
-    @IBOutlet weak var imgCover: UIImageView!
-    
-    
     var cover: UIImageView!
     
     override func awakeFromNib() {
@@ -27,6 +23,7 @@ class CustomizedCell: UICollectionViewCell {
     private func makeUI() {
         
         cover = UIImageView()
+        cover.image = UIImage(named: "09")
         self.addSubview(cover)
         // 最上面的图
 //        imgCover.snp_makeConstraints { (make) -> Void in

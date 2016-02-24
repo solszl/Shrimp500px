@@ -22,9 +22,9 @@ class HomeViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.backgroundColor = UIColor.clearColor()
+        collectionView.backgroundColor = UIColor.lightGrayColor()
         collectionView.snp_makeConstraints { make in
-//            make.edges.equalTo(self.view)
+            make.edges.equalTo(self.view)
         }
     }
     
@@ -45,15 +45,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(NibNames.WorkCell, forIndexPath: indexPath) as! CustomizedCell//WorkCell
         
-        var name = ""
-        
-        if(arc4random() % 2 == 0) {
-            name = "cover1"
-        } else {
-            name = "avatar"
-        }
-        
-        cell.cover.image = UIImage(named: name)
         cell.backgroundColor = UIColor.purpleColor()
         return cell
     }
