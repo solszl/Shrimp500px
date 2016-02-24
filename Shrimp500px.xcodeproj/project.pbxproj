@@ -28,6 +28,7 @@
 		FFE9D9C61C74E97000D5A092 /* Shrimp500pxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9C51C74E97000D5A092 /* Shrimp500pxUITests.swift */; };
 		FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */; };
 		FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */; };
+		FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8FFA11C7E05EA002AF08E /* WorkItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		FFE9D9C71C74E97000D5A092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+500px.swift"; sourceTree = "<group>"; };
+		FFF8FFA11C7E05EA002AF08E /* WorkItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */,
 				FF57B01B1C7772F300E5BF08 /* WorkCell.swift */,
 				FF57B01C1C7772F300E5BF08 /* WorkCell.xib */,
+				FFF8FFA11C7E05EA002AF08E /* WorkItemCell.swift */,
 			);
 			path = Work;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
+				FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */,
 				FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */,
 				FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
