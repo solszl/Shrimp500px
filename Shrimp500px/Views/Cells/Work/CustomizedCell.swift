@@ -26,8 +26,9 @@ class CustomizedCell: UICollectionViewCell {
         cover.image = UIImage(named: "09")
         self.addSubview(cover)
         // 最上面的图
-//        imgCover.snp_makeConstraints { (make) -> Void in
-//            make.size.equalTo(CGSizeMake(80, 80))
-//        }
+        cover.snp_makeConstraints { (make) -> Void in
+            make.center.equalTo(self)
+            make.size.equalTo(CGSizeMake(100, 100))
+        }
     }
 }

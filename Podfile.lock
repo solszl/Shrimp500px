@@ -1,17 +1,20 @@
 PODS:
   - Alamofire (3.2.0)
+  - Kingfisher (2.0.3)
   - SnapKit (0.19.1)
   - SwiftyJSON (2.3.2)
   - XCGLogger (3.2)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher
   - SnapKit
   - SwiftyJSON
   - XCGLogger (~> 3.2)
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  Kingfisher: 44c1f1912f19371a67d701e67c96d6bb45ca1c8d
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   XCGLogger: da1f341f4bb8979db6e1df64232f04d9698402d4

@@ -17,23 +17,22 @@ class HomeViewController: BaseViewController {
         log.warning("step 2")
         
         // 注册xib组件
-        collectionView.registerNib(UINib(nibName: NibNames.WorkCell, bundle: nil), forCellWithReuseIdentifier: NibNames.WorkCell)
-        
+        collectionView.registerClass(CustomizedCell.self, forCellWithReuseIdentifier: NibNames.WorkCell)
         collectionView.dataSource = self
         collectionView.delegate = self
         
         collectionView.backgroundColor = UIColor.lightGrayColor()
-        collectionView.snp_makeConstraints { make in
-            make.edges.equalTo(self.view)
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         log.warning("step 1")
-        collectionView = UICollectionView(frame: ScreenBounds, collectionViewLayout: UICollectionViewLayout())
+        collectionView = UICollectionView(frame: ScreenBounds, collectionViewLayout: UICollectionViewFlowLayout())
         self.view.addSubview(collectionView)
+        collectionView.snp_makeConstraints { make in
+            make.edges.equalTo(self.view)
+        }
     }
 }
 
@@ -46,6 +45,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(NibNames.WorkCell, forIndexPath: indexPath) as! CustomizedCell//WorkCell
         
         cell.backgroundColor = UIColor.purpleColor()
+        log.info("item render call")
         return cell
     }
     
@@ -55,7 +55,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = CGSizeMake(ScreenWidth, 300)
+        let size = CGSizeMake(ScreenWidth, 100)
         
         return size
     }
