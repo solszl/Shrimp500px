@@ -649,6 +649,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenliang.Shrimp500px;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/Shrimp500px-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -665,6 +666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenliang.Shrimp500px;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/Shrimp500px-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
