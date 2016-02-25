@@ -48,21 +48,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.imgCover.image = UIImage(named: "09")
         cell.tintColor = UIColor.redColor()
+        log.warning("1")
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        let cell = tableView.cellForRowAtIndexPath(indexPath) as! WorkItemCell
-//        let size = cell.imgCover.bounds.size
-//        return size.height
-        
-//        return 300.0
-        let height:CGFloat = tableView.fd_heightForCellWithIdentifier(NibNames.WorkItemCell, cacheByIndexPath: indexPath) { [weak self]
-            (cell) -> Void in
-            let item = cell as! WorkItemCell
-            item.imgCover.image = UIImage(named: "09") 
+        let height = tableView.fd_heightForCellWithIdentifier(NibNames.WorkItemCell) { (obj) -> Void in
+            let cell = obj as! WorkItemCell
+            cell.imgCover.image = UIImage(named: "09")
         }
         
+        log.warning("2")
         return height
     }
 }

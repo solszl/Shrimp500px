@@ -19,14 +19,11 @@ class WorkItemCell: UITableViewCell {
         self.selectionStyle = .None
         self.backgroundColor = UIColor.clearColor()
         
-        addSubview(imgCover)
+        self.contentView.addSubview(imgCover)
         
         
         imgCover.snp_makeConstraints { (make) -> Void in
-//            make.center.equalTo(self)
-            make.size.equalTo(self.snp_size)
-            make.center.equalTo(self)
-//            make.edges.equalTo(UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2))
+            make.size.equalTo(self.contentView)
         }
     }
 

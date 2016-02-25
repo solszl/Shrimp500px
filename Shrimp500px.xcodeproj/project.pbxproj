@@ -19,7 +19,6 @@
 		FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */; };
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
-		FF95FDC51C7E3F3F003565F5 /* Shrimp500px-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = FFF8FFA61C7E36DE002AF08E /* Shrimp500px-Bridging-Header.h */; };
 		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
 		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
@@ -492,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF95FDC51C7E3F3F003565F5 /* Shrimp500px-Bridging-Header.h in Sources */,
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
