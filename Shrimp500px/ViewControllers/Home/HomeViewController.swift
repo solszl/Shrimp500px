@@ -19,7 +19,7 @@ class HomeViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.registerClass(WorkItemCell.self, forCellReuseIdentifier: NibNames.WorkItemCell)
-        tableView.separatorStyle = .None
+        tableView.separatorStyle = .SingleLine
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.estimatedRowHeight = 100
     }
@@ -35,7 +35,6 @@ class HomeViewController: BaseViewController {
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
             make.center.equalTo(self.view)
         }
-        
     }
 }
 
@@ -57,7 +56,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 //        let size = cell.imgCover.bounds.size
 //        return size.height
         
-        print("call once")
-        return 300.0
+//        return 300.0
+        let height:CGFloat = tableView.fd_heightForCellWithIdentifier(NibNames.WorkItemCell, cacheByIndexPath: indexPath) { [weak self]
+            (cell) -> Void in
+            let item = cell as! WorkItemCell
+            item.imgCover.image = UIImage(named: "09") 
+        }
+        
+        return height
     }
 }

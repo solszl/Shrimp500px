@@ -19,6 +19,7 @@
 		FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */; };
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
+		FF95FDC51C7E3F3F003565F5 /* Shrimp500px-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = FFF8FFA61C7E36DE002AF08E /* Shrimp500px-Bridging-Header.h */; };
 		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
 		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 		FFE9D9D51C74EE6800D5A092 /* SHTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+500px.swift"; sourceTree = "<group>"; };
 		FFF8FFA11C7E05EA002AF08E /* WorkItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkItemCell.swift; sourceTree = "<group>"; };
+		FFF8FFA61C7E36DE002AF08E /* Shrimp500px-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shrimp500px-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 		FFE9D9A41C74E97000D5A092 /* Shrimp500px */ = {
 			isa = PBXGroup;
 			children = (
+				FFF8FFA51C7E3610002AF08E /* support */,
 				FF765CB11C7822A500A54A77 /* Constants */,
 				FFE9D9D71C74FD5500D5A092 /* Extension */,
 				FFE9D9D31C74EDFA00D5A092 /* ViewControllers */,
@@ -293,6 +296,14 @@
 				FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FFF8FFA51C7E3610002AF08E /* support */ = {
+			isa = PBXGroup;
+			children = (
+				FFF8FFA61C7E36DE002AF08E /* Shrimp500px-Bridging-Header.h */,
+			);
+			name = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF95FDC51C7E3F3F003565F5 /* Shrimp500px-Bridging-Header.h in Sources */,
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
@@ -629,10 +641,14 @@
 			baseConfigurationReference = 10AE8742BE55E6A922BD578F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
 				INFOPLIST_FILE = Shrimp500px/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenliang.Shrimp500px;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/Shrimp500px-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -641,10 +657,14 @@
 			baseConfigurationReference = C5DC997CCDEE08EBC7D3C0B0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
 				INFOPLIST_FILE = Shrimp500px/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenliang.Shrimp500px;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/Shrimp500px-Bridging-Header.h";
 			};
 			name = Release;
 		};
