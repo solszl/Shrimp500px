@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SwiftyJSON
 
 class HomeViewController: BaseViewController {
     
@@ -46,19 +47,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(NibNames.WorkItemCell) as! WorkItemCell
         
-        cell.imgCover.image = UIImage(named: "09")
+        cell.imgCover.image = UIImage(named: "11")
         cell.tintColor = UIColor.redColor()
-        log.warning("1")
+        
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let height = tableView.fd_heightForCellWithIdentifier(NibNames.WorkItemCell) { (obj) -> Void in
             let cell = obj as! WorkItemCell
-            cell.imgCover.image = UIImage(named: "09")
+            cell.imgCover.image = UIImage(named: "11")
         }
-        
-        log.warning("2")
         return height
     }
 }

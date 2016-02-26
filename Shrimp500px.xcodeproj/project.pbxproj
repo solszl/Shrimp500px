@@ -20,6 +20,7 @@
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
 		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
+		FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */; };
 		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
 		FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		FF765CB21C7822BD00A54A77 /* NibNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLayout.swift; sourceTree = "<group>"; };
 		FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedCell.swift; sourceTree = "<group>"; };
 		FFE9D9A21C74E97000D5A092 /* Shrimp500px.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp500px.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				FF57B0151C7770C200E5BF08 /* Recommend */,
 				FF57B01A1C7772D300E5BF08 /* Work */,
+				FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -212,6 +215,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		FFAA5FE71C80C496000F4E60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FFE9D9991C74E97000D5A092 = {
 			isa = PBXGroup;
 			children = (
@@ -237,11 +247,12 @@
 		FFE9D9A41C74E97000D5A092 /* Shrimp500px */ = {
 			isa = PBXGroup;
 			children = (
-				FFF8FFA51C7E3610002AF08E /* support */,
 				FF765CB11C7822A500A54A77 /* Constants */,
 				FFE9D9D71C74FD5500D5A092 /* Extension */,
+				FFAA5FE71C80C496000F4E60 /* Model */,
 				FFE9D9D31C74EDFA00D5A092 /* ViewControllers */,
 				FF57B0131C7769CF00E5BF08 /* Views */,
+				FFF8FFA51C7E3610002AF08E /* support */,
 				FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */,
 				FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */,
 				FFE9D9B11C74E97000D5A092 /* Info.plist */,
@@ -302,7 +313,7 @@
 			children = (
 				FFF8FFA61C7E36DE002AF08E /* Shrimp500px-Bridging-Header.h */,
 			);
-			name = support;
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */,
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
@@ -646,7 +658,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenliang.Shrimp500px;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/Shrimp500px-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/support/Shrimp500px-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
@@ -663,7 +675,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Shrimp500px/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenliang.Shrimp500px;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/Shrimp500px-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shrimp500px/support/Shrimp500px-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;

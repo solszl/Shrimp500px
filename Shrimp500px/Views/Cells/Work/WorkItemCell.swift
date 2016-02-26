@@ -33,6 +33,13 @@ class WorkItemCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    }
+}
+
+extension WorkItemCell: CellConfigData {
+    func configData(data: AnyObject?) {
+        guard data == nil else {
+            return
+        }
     }
 }
