@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (3.2.0)
-  - Kingfisher (2.0.3)
+  - Kingfisher (2.0.4)
+  - OAuthSwift (0.5.1)
   - SnapKit (0.19.1)
   - SwiftyJSON (2.3.2)
   - UITableView+FDTemplateLayoutCell (1.4)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - OAuthSwift
   - SnapKit
   - SwiftyJSON
   - UITableView+FDTemplateLayoutCell
@@ -16,7 +18,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  Kingfisher: 44c1f1912f19371a67d701e67c96d6bb45ca1c8d
+  Kingfisher: 8f1ec2c067ade2c549a1a594379b69c4b1ff81ab
+  OAuthSwift: d63f7f329f49787319a7e35974c18b10865fe636
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
