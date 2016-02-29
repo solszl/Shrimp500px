@@ -30,7 +30,7 @@ class MainTabBarViewController: UITabBarController {
         // 消息
         addOneChlildVc(HomeViewController(), title: "Notifition", imageName: "", selectedImageName: "")
         // 我的
-        addOneChlildVc(HomeViewController(), title: "Profile", imageName: "", selectedImageName: "")
+        addOneChlildVc(MyViewController(), title: "Profile", imageName: "", selectedImageName: "")
     }
     
     private func addOneChlildVc(childVc: UIViewController, title: String, imageName: String, selectedImageName: String) {
