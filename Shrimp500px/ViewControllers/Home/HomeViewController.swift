@@ -41,7 +41,7 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -49,7 +49,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.imgCover.image = UIImage(named: "11")
         cell.tintColor = UIColor.redColor()
-        
+        cell.setNeedsLayout()
         return cell
     }
     
@@ -57,7 +57,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let height = tableView.fd_heightForCellWithIdentifier(NibNames.WorkItemCell) { (obj) -> Void in
             let cell = obj as! WorkItemCell
             cell.imgCover.image = UIImage(named: "11")
+            cell.setNeedsLayout()
         }
+        
+        
         return height
     }
 }

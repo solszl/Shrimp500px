@@ -13,8 +13,6 @@
 		FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C4711C82072D001B0445 /* Alamofire+SwiftyJSON.swift */; };
 		FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */; };
 		FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B0111C77572600E5BF08 /* HomeViewController.swift */; };
-		FF57B01D1C7772F300E5BF08 /* WorkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01B1C7772F300E5BF08 /* WorkCell.swift */; };
-		FF57B01E1C7772F300E5BF08 /* WorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B01C1C7772F300E5BF08 /* WorkCell.xib */; };
 		FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */; };
 		FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B0201C7773D400E5BF08 /* RecommendCell.xib */; };
 		FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */; };
@@ -24,6 +22,8 @@
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
 		FF789BED1C816A6100501A67 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF789BEC1C816A6100501A67 /* Photo.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
+		FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */; };
+		FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */; };
 		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
 		FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */; };
 		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
@@ -64,8 +64,6 @@
 		FF27C4711C82072D001B0445 /* Alamofire+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FF57B0111C77572600E5BF08 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FF57B01B1C7772F300E5BF08 /* WorkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkCell.swift; sourceTree = "<group>"; };
-		FF57B01C1C7772F300E5BF08 /* WorkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkCell.xib; sourceTree = "<group>"; };
 		FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		FF57B0201C7773D400E5BF08 /* RecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCell.xib; sourceTree = "<group>"; };
 		FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		FF765CB21C7822BD00A54A77 /* NibNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		FF789BEC1C816A6100501A67 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLayout.swift; sourceTree = "<group>"; };
+		FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+500px.swift"; sourceTree = "<group>"; };
+		FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompsAvatar.swift; sourceTree = "<group>"; };
 		FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedCell.swift; sourceTree = "<group>"; };
@@ -175,6 +175,7 @@
 		FF57B0131C7769CF00E5BF08 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF95F0651C85298D00B7FA80 /* Button */,
 				FF57B0141C7769DB00E5BF08 /* Cells */,
 			);
 			path = Views;
@@ -202,9 +203,8 @@
 		FF57B01A1C7772D300E5BF08 /* Work */ = {
 			isa = PBXGroup;
 			children = (
+				FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */,
 				FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */,
-				FF57B01B1C7772F300E5BF08 /* WorkCell.swift */,
-				FF57B01C1C7772F300E5BF08 /* WorkCell.xib */,
 				FFF8FFA11C7E05EA002AF08E /* WorkItemCell.swift */,
 			);
 			path = Work;
@@ -242,6 +242,13 @@
 				FF765CB21C7822BD00A54A77 /* NibNames.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		FF95F0651C85298D00B7FA80 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		FFAA5FE71C80C496000F4E60 /* Model */ = {
@@ -353,6 +360,7 @@
 				FF27C4711C82072D001B0445 /* Alamofire+SwiftyJSON.swift */,
 				FFDA031E1C817A6000853F22 /* Dictionary+500px.swift */,
 				FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */,
+				FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -478,7 +486,6 @@
 			files = (
 				FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */,
 				FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */,
-				FF57B01E1C7772F300E5BF08 /* WorkCell.xib in Resources */,
 				FF66BA281C842EA800D9C031 /* about.html in Resources */,
 				FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */,
 			);
@@ -556,11 +563,13 @@
 				FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */,
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
+				FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
 				FF2481641C7CD8A400F20344 /* MainTabBarViewController.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
 				FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
+				FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */,
 				FFDA031F1C817A6000853F22 /* Dictionary+500px.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
 				FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */,
@@ -568,7 +577,6 @@
 				FF789BED1C816A6100501A67 /* Photo.swift in Sources */,
 				FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
-				FF57B01D1C7772F300E5BF08 /* WorkCell.swift in Sources */,
 				FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */,
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
 				FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */,

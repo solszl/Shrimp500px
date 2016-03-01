@@ -7,8 +7,11 @@
 //
 
 import Foundation
-//
-//struct Photo {
+
+struct Photo {
+    
+    var avatar = "09"
+    
 //	let currentPage: Int
 //	let feature: String
 //	struct Filters {
@@ -250,4 +253,4 @@ import Foundation
 //		guard let totalPages = info["total_pages"] as? Int else { return nil }
 //		return Photo(currentPage: currentPage, feature: feature, filters: filters, photos: photos, totalItems: totalItems, totalPages: totalPages)
 //	}
-//}
+}
