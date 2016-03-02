@@ -30,6 +30,6 @@ class CompsAvatar: UIView, WorkItemCellDataSource {
     }
     
     func setData(data: Photo) {
-        imgAvatarView.image = UIImage(named: data.avatar)
+//        imgAvatarView.image = UIImage(named: data.avatar)
     }
 }
