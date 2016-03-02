@@ -23,6 +23,9 @@
 		FF789BED1C816A6100501A67 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF789BEC1C816A6100501A67 /* Photo.swift */; };
 		FF7FBE8D1C873062007A7ED9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE8C1C873061007A7ED9 /* User.swift */; };
 		FF7FBE8F1C873719007A7ED9 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE8E1C873719007A7ED9 /* ImageSize.swift */; };
+		FF7FBE911C873A55007A7ED9 /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE901C873A55007A7ED9 /* GlobalService.swift */; };
+		FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */; };
+		FF7FBE961C873F62007A7ED9 /* NetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE951C873F62007A7ED9 /* NetStatus.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
 		FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */; };
 		FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */; };
@@ -76,6 +79,9 @@
 		FF789BEC1C816A6100501A67 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FF7FBE8C1C873061007A7ED9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF7FBE8E1C873719007A7ED9 /* ImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
+		FF7FBE901C873A55007A7ED9 /* GlobalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
+		FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkService.swift; sourceTree = "<group>"; };
+		FF7FBE951C873F62007A7ED9 /* NetStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetStatus.swift; sourceTree = "<group>"; };
 		FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLayout.swift; sourceTree = "<group>"; };
 		FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+500px.swift"; sourceTree = "<group>"; };
 		FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompsAvatar.swift; sourceTree = "<group>"; };
@@ -248,6 +254,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		FF7FBE921C873C8A007A7ED9 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */,
+				FF7FBE951C873F62007A7ED9 /* NetStatus.swift */,
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
 		FF95F0651C85298D00B7FA80 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,16 +280,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FFDA031C1C81773E00853F22 /* Net */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Net;
-			sourceTree = "<group>";
-		};
 		FFDA031D1C81774C00853F22 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FF7FBE921C873C8A007A7ED9 /* NetWork */,
+				FF7FBE901C873A55007A7ED9 /* GlobalService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -307,7 +317,6 @@
 				FF765CB11C7822A500A54A77 /* Constants */,
 				FFE9D9D71C74FD5500D5A092 /* Extension */,
 				FFAA5FE71C80C496000F4E60 /* Model */,
-				FFDA031C1C81773E00853F22 /* Net */,
 				FFDA031D1C81774C00853F22 /* Service */,
 				FFE9D9D31C74EDFA00D5A092 /* ViewControllers */,
 				FF57B0131C7769CF00E5BF08 /* Views */,
@@ -573,12 +582,15 @@
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
 				FF2481641C7CD8A400F20344 /* MainTabBarViewController.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
+				FF7FBE961C873F62007A7ED9 /* NetStatus.swift in Sources */,
+				FF7FBE911C873A55007A7ED9 /* GlobalService.swift in Sources */,
 				FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */,
 				FFDA031F1C817A6000853F22 /* Dictionary+500px.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
 				FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */,
+				FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */,
 				FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */,
 				FF789BED1C816A6100501A67 /* Photo.swift in Sources */,
 				FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */,

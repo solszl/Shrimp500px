@@ -48,15 +48,6 @@ class MyViewController: BaseViewController {
 
 extension AppDelegate {
     
-    //    func applicationHandleOpenURL(url: NSURL) {
-    //        if (url.host == "oauth-callback") {
-    //            OAuthSwift.handleOpenURL(url)
-    //        } else {
-    //            // Google provider is the only one wuth your.bundle.id url schema.
-    //            OAuthSwift.handleOpenURL(url)
-    //        }
-    //    }
-    
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
         if (url.host == "oauth-callback") {
             OAuthSwift.handleOpenURL(url)
