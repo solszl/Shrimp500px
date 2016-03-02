@@ -257,10 +257,10 @@
 		FF7FBE921C873C8A007A7ED9 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */,
 				FF7FBE951C873F62007A7ED9 /* NetStatus.swift */,
+				FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */,
 			);
-			name = NetWork;
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		FF95F0651C85298D00B7FA80 /* Button */ = {
