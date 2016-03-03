@@ -9,6 +9,8 @@
 import UIKit
 import SnapKit
 import OAuthSwift
+import Alamofire
+import AlamofireObjectMapper
 
 class MyViewController: BaseViewController {
     

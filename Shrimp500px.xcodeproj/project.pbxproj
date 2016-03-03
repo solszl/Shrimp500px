@@ -11,6 +11,14 @@
 		FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2481601C7CD7E800F20344 /* SplashViewController.swift */; };
 		FF2481641C7CD8A400F20344 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2481631C7CD8A400F20344 /* MainTabBarViewController.swift */; };
 		FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C4711C82072D001B0445 /* Alamofire+SwiftyJSON.swift */; };
+		FF3864EF1C87DABF009363DA /* BizzPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864EE1C87DABF009363DA /* BizzPhoto.swift */; };
+		FF3864F11C87DAD4009363DA /* BizzCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864F01C87DAD4009363DA /* BizzCollection.swift */; };
+		FF3864F31C87DB00009363DA /* BizzComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864F21C87DB00009363DA /* BizzComment.swift */; };
+		FF3864F51C87DB1E009363DA /* BizzGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864F41C87DB1E009363DA /* BizzGallery.swift */; };
+		FF3864F71C87DB33009363DA /* BizzUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864F61C87DB33009363DA /* BizzUpload.swift */; };
+		FF3864F91C87DB44009363DA /* BizzUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864F81C87DB44009363DA /* BizzUser.swift */; };
+		FF3864FB1C881AC3009363DA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864FA1C881AC3009363DA /* Router.swift */; };
+		FF3864FD1C888D27009363DA /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3864FC1C888D27009363DA /* Photos.swift */; };
 		FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */; };
 		FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B0111C77572600E5BF08 /* HomeViewController.swift */; };
 		FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */; };
@@ -26,6 +34,7 @@
 		FF7FBE911C873A55007A7ED9 /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE901C873A55007A7ED9 /* GlobalService.swift */; };
 		FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */; };
 		FF7FBE961C873F62007A7ED9 /* NetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE951C873F62007A7ED9 /* NetStatus.swift */; };
+		FF7FBE981C8759AC007A7ED9 /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE971C8759AC007A7ED9 /* BusinessService.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
 		FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */; };
 		FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */; };
@@ -67,6 +76,14 @@
 		FF2481601C7CD7E800F20344 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		FF2481631C7CD8A400F20344 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FF27C4711C82072D001B0445 /* Alamofire+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+SwiftyJSON.swift"; sourceTree = "<group>"; };
+		FF3864EE1C87DABF009363DA /* BizzPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizzPhoto.swift; sourceTree = "<group>"; };
+		FF3864F01C87DAD4009363DA /* BizzCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizzCollection.swift; sourceTree = "<group>"; };
+		FF3864F21C87DB00009363DA /* BizzComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizzComment.swift; sourceTree = "<group>"; };
+		FF3864F41C87DB1E009363DA /* BizzGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizzGallery.swift; sourceTree = "<group>"; };
+		FF3864F61C87DB33009363DA /* BizzUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizzUpload.swift; sourceTree = "<group>"; };
+		FF3864F81C87DB44009363DA /* BizzUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizzUser.swift; sourceTree = "<group>"; };
+		FF3864FA1C881AC3009363DA /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FF3864FC1C888D27009363DA /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		FF57B00F1C7756C700E5BF08 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FF57B0111C77572600E5BF08 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
@@ -82,6 +99,7 @@
 		FF7FBE901C873A55007A7ED9 /* GlobalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
 		FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkService.swift; sourceTree = "<group>"; };
 		FF7FBE951C873F62007A7ED9 /* NetStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetStatus.swift; sourceTree = "<group>"; };
+		FF7FBE971C8759AC007A7ED9 /* BusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessService.swift; sourceTree = "<group>"; };
 		FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLayout.swift; sourceTree = "<group>"; };
 		FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+500px.swift"; sourceTree = "<group>"; };
 		FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompsAvatar.swift; sourceTree = "<group>"; };
@@ -163,6 +181,20 @@
 				FF2481631C7CD8A400F20344 /* MainTabBarViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FF3864ED1C87D995009363DA /* Bizz */ = {
+			isa = PBXGroup;
+			children = (
+				FF3864F01C87DAD4009363DA /* BizzCollection.swift */,
+				FF3864F21C87DB00009363DA /* BizzComment.swift */,
+				FF3864F41C87DB1E009363DA /* BizzGallery.swift */,
+				FF3864EE1C87DABF009363DA /* BizzPhoto.swift */,
+				FF3864F61C87DB33009363DA /* BizzUpload.swift */,
+				FF3864F81C87DB44009363DA /* BizzUser.swift */,
+				FF3864FA1C881AC3009363DA /* Router.swift */,
+			);
+			path = Bizz;
 			sourceTree = "<group>";
 		};
 		FF57B00D1C77567000E5BF08 /* Home */ = {
@@ -275,6 +307,7 @@
 			children = (
 				FF7FBE8E1C873719007A7ED9 /* ImageSize.swift */,
 				FF789BEC1C816A6100501A67 /* Photo.swift */,
+				FF3864FC1C888D27009363DA /* Photos.swift */,
 				FF7FBE8C1C873061007A7ED9 /* User.swift */,
 			);
 			path = Model;
@@ -283,7 +316,9 @@
 		FFDA031D1C81774C00853F22 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FF3864ED1C87D995009363DA /* Bizz */,
 				FF7FBE921C873C8A007A7ED9 /* NetWork */,
+				FF7FBE971C8759AC007A7ED9 /* BusinessService.swift */,
 				FF7FBE901C873A55007A7ED9 /* GlobalService.swift */,
 			);
 			path = Service;
@@ -575,10 +610,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3864FD1C888D27009363DA /* Photos.swift in Sources */,
 				FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */,
 				FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */,
 				FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */,
+				FF3864F91C87DB44009363DA /* BizzUser.swift in Sources */,
 				FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */,
+				FF3864F11C87DAD4009363DA /* BizzCollection.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
 				FF2481641C7CD8A400F20344 /* MainTabBarViewController.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
@@ -587,19 +625,25 @@
 				FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */,
+				FF3864F71C87DB33009363DA /* BizzUpload.swift in Sources */,
 				FFDA031F1C817A6000853F22 /* Dictionary+500px.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
+				FF3864FB1C881AC3009363DA /* Router.swift in Sources */,
 				FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */,
 				FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */,
+				FF3864EF1C87DABF009363DA /* BizzPhoto.swift in Sources */,
 				FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */,
 				FF789BED1C816A6100501A67 /* Photo.swift in Sources */,
 				FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */,
 				FF7FBE8F1C873719007A7ED9 /* ImageSize.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
 				FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */,
+				FF3864F31C87DB00009363DA /* BizzComment.swift in Sources */,
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
 				FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */,
+				FF3864F51C87DB1E009363DA /* BizzGallery.swift in Sources */,
 				FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */,
+				FF7FBE981C8759AC007A7ED9 /* BusinessService.swift in Sources */,
 				FF66BA261C841B4300D9C031 /* WebViewController.swift in Sources */,
 				FF7FBE8D1C873062007A7ED9 /* User.swift in Sources */,
 			);

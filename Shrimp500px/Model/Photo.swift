@@ -7,21 +7,37 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct Photo {
+struct Photo: Mappable {
     
  /// 照片ID
-    let id:Int
+    var id:Int?
  /// 照片实际宽度
-    let width: Int
+    var width: Int?
  /// 照片实际高度
-    let height: Int
+    var height: Int?
+    
+    var imgName: String?
+    
  /// 用户信息
     var user: User?
     
-    init(id: Int, width: Int, height: Int) {
-        self.id = id
-        self.width = width
-        self.height = height
+//    init(id: Int, width: Int, height: Int) {
+//        self.id = id
+//        self.width = width
+//        self.height = height
+//    }
+    
+    init?(_ map: Map) {
+         mapping(map)
+    }
+    
+    mutating func mapping(map: Map) {
+        self.id <- map["id"]
+        self.width <- map["id"]
+        self.height <- map["height"]
+        self.imgName <- map["name"]
+        self.user <- map["user"]
     }
 }
