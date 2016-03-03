@@ -29,11 +29,11 @@ extension NetWorkService: NetStatusDelegate {
     }
     
     func stopListen() {
-        
+        netStatus?.stopListen()
     }
     
     func reachabilityChanged(status: Reachability.NetworkStatus) {
-        
+        log.info("current status change to: \(status.description)")
     }
     
     func currentReachabilityStatus(status: Reachability.NetworkStatus) {
