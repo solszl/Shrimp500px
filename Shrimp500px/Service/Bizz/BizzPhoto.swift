@@ -13,18 +13,49 @@ import Alamofire
 class BizzPhoto {
     //: URLRequestConvertible
     
-    
     private var method: Alamofire.Method {
         switch self {
         default: return .GET
         }
     }
     
-    let path: String = "/photos"
-
+    let APIPath: String = "/photos?"
+    
+    var paramters = [NSURLQueryItem]()
+    
+    var parameters = [String: AnyObject]()
+    
+    func clearParamter() -> Self {
+        paramters.removeAll()
+        return self
+    }
+    
+    func addParamter<T>(key:String, value: T) -> Self {
+        paramters.append(NSURLQueryItem(name: key, value: String(value)))
+        return self
+    }
+    
+    func load() {
+        // 添加一下key
+        addParamter("consumer_key", value: CustomKey)
+    }
+    
+    var queryString: String? {
+        
+        let URL = NSURL(string: BaseURLString)!
+        let request = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(APIPath))
+        request.HTTPMethod = method.rawValue
+        
+        let components = NSURLComponents()
+        components.queryItems = paramters
+        
+        return  (request.URLString + components.query!)
+    }
+    
+// MARK: 无需登陆即可访问的方法
+    
+// MARK: 需登陆才可以使用的方法
 }
-
-
 
 // 使用方法
 //let url = "https://api.500px.com/v1/photos?feature=fresh_today&sort=created_at&image_size=3&include_store=store_download&include_states=voted&consumer_key=SHxQG62Gp8UYe8ZTArCXDdH404HFXtPvMlhqth3U"

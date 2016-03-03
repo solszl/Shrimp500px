@@ -12,4 +12,9 @@ import Alamofire
 
 class BizzUpload {
     
+    let APIPath: String = "/upload?"
+    
+    // MARK: 无需登陆即可访问的方法
+    
+    // MARK: 需登陆才可以使用的方法
 }
