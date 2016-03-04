@@ -12,7 +12,7 @@ import Alamofire
 
 class BizzCollection {
     
-    let APIPath: String = "/collections?"
+    let APIPath: String = "/collections"
     
     // MARK: 无需登陆即可访问的方法
     

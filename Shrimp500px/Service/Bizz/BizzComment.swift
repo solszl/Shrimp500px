@@ -12,7 +12,7 @@ import Alamofire
 
 class BizzComment {
     
-    let APIPath: String = "/comments?"
+    let APIPath: String = "/comments"
     
     
     // MARK: 无需登陆即可访问的方法

@@ -19,19 +19,19 @@ class BizzPhoto {
         }
     }
     
-    let APIPath: String = "/photos?"
+    private static let APIPath: String = "/photos"
     
-    var paramters = [NSURLQueryItem]()
+    let api: String = APIPath
     
     var parameters = [String: AnyObject]()
     
     func clearParamter() -> Self {
-        paramters.removeAll()
+        parameters.removeAll()
         return self
     }
     
-    func addParamter<T>(key:String, value: T) -> Self {
-        paramters.append(NSURLQueryItem(name: key, value: String(value)))
+    func addParamter(key:String, value: AnyObject) -> Self {
+        parameters[key] = value
         return self
     }
     
@@ -43,13 +43,11 @@ class BizzPhoto {
     var queryString: String? {
         
         let URL = NSURL(string: BaseURLString)!
-        let request = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(APIPath))
+        let request = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(api))
         request.HTTPMethod = method.rawValue
+        let encoding = Alamofire.ParameterEncoding.URL
         
-        let components = NSURLComponents()
-        components.queryItems = paramters
-        
-        return  (request.URLString + components.query!)
+        return encoding.encode(request, parameters: parameters).0.URLString
     }
     
 // MARK: 无需登陆即可访问的方法
