@@ -9,6 +9,8 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +36,13 @@ class MainTabBarViewController: UITabBarController {
     }
     
     private func addOneChlildVc(childVc: UIViewController, title: String, imageName: String, selectedImageName: String) {
-        childVc.title = title
+//        childVc.title = title
 //        childVc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
         
         childVc.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
         childVc.view.backgroundColor = UIColor.whiteColor()
+//        let nav: UINavigationController = UINavigationController(rootViewController: childVc)
+//        nav.setNavigationBarHidden(true, animated: false)
         addChildViewController(childVc)
     }
 }

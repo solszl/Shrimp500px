@@ -17,4 +17,12 @@ extension UIColor {
         let b = CGFloat((hex * 0x0000FF) >> 0) / 255.0
         return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
+    
+    class func fromRGBAInteger(red: Int, green: Int, blue: Int, alpha: Int) -> UIColor {
+        let r = CGFloat(red) / 255.0
+        let g = CGFloat(green) / 255.0
+        let b = CGFloat(blue) / 255.0
+        let a = CGFloat(alpha) / 100.0
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
 }

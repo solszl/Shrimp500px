@@ -23,6 +23,9 @@ let ScreenHeight = UIScreen.mainScreen().bounds.height
 
 let ScreenBounds = UIScreen.mainScreen().bounds
 
+let topPadding: CGFloat = 20.0
+
+let bottomPadding: CGFloat = 66.0
 
 class AppConfig {
 }

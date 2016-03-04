@@ -23,17 +23,21 @@ class HomeViewController: BaseViewController {
         tableView.separatorStyle = .SingleLine
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.estimatedRowHeight = 100
+        
+        // 印象笔记的绿色. 模拟一下
+        self.view.backgroundColor = UIColor.fromRGBAInteger(32, green: 192, blue: 92, alpha: 100)
+        tableView.backgroundColor = UIColor.fromRGBAInteger(32, green: 192, blue: 92, alpha: 100)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         log.warning("step 1")
-        tableView = UITableView(frame: ScreenBounds)
+        tableView = UITableView(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: ScreenHeight))
         self.view.addSubview(tableView)
         
         tableView.snp_makeConstraints { (make) -> Void in
-            make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+            make.edges.equalTo(UIEdgeInsets(top: 20, left: 0, bottom: -20, right: 0))
             make.center.equalTo(self.view)
         }
     }
