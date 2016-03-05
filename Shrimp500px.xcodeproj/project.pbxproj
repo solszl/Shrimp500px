@@ -96,7 +96,7 @@
 		FF66BA271C842EA800D9C031 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		FF73500D1C8ABAF80034A721 /* CategoryBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryBar.swift; sourceTree = "<group>"; };
 		FF73500F1C8ABBFB0034A721 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
-		FF7350121C8AC77E0034A721 /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryButton.swift; path = Shrimp500px/Views/CategoryButton.swift; sourceTree = SOURCE_ROOT; };
+		FF7350121C8AC77E0034A721 /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		FF765CB21C7822BD00A54A77 /* NibNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		FF789BEC1C816A6100501A67 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FF7FBE8C1C873061007A7ED9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -262,8 +262,8 @@
 		FF652DF71C7CE6510067A1C1 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */,
 				FF73500D1C8ABAF80034A721 /* CategoryBar.swift */,
+				FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			children = (
 				FF73500F1C8ABBFB0034A721 /* SeparatorLine.swift */,
 			);
-			name = Accessory;
+			path = Accessory;
 			sourceTree = "<group>";
 		};
 		FF765CB11C7822A500A54A77 /* Constants */ = {
