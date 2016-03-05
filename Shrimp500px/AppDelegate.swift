@@ -64,14 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setKeyWindow() {
         self.window = UIWindow(frame: ScreenBounds)
-        
-        let vc = showSplash()
-        
-//        let nav = UINavigationController(rootViewController: vc)
-//        nav.setNavigationBarHidden(true, animated: true)
-//        self.window?.rootViewController = nav
-
-        self.window?.rootViewController = vc
+        self.window?.rootViewController = MainTabBarViewController()
         self.window?.makeKeyAndVisible()
     }
     

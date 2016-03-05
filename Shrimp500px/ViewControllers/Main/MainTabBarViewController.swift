@@ -10,10 +10,8 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     
-    
-
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //        super.viewDidLoad()
         
         addTabChildren()
     }
@@ -22,7 +20,6 @@ class MainTabBarViewController: UITabBarController {
      初始化所有子控制器
      */
     private func addTabChildren() {
-        
         // 首页
         addOneChlildVc(HomeViewController(), title: "Home1", imageName: "", selectedImageName: "")
         // 探索发现
@@ -36,13 +33,7 @@ class MainTabBarViewController: UITabBarController {
     }
     
     private func addOneChlildVc(childVc: UIViewController, title: String, imageName: String, selectedImageName: String) {
-//        childVc.title = title
-//        childVc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
-        
         childVc.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
-        childVc.view.backgroundColor = UIColor.whiteColor()
-//        let nav: UINavigationController = UINavigationController(rootViewController: childVc)
-//        nav.setNavigationBarHidden(true, animated: false)
         addChildViewController(childVc)
     }
 }
