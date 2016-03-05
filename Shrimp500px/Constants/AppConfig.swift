@@ -28,4 +28,25 @@ let topPadding: CGFloat = 20.0
 let bottomPadding: CGFloat = 66.0
 
 class AppConfig {
+    
+    /**
+     分割线的颜色
+     */
+    class func separatorLineColor() -> UIColor {
+        return UIColor.lightGrayColor()
+    }
+    
+    /**
+     未选中文字颜色
+     */
+    class func unselectedColor() -> UIColor {
+        return UIColor.blackColor()
+    }
+    
+    /**
+     选中文字颜色
+     */
+    class func selectedColor() -> UIColor {
+        return UIColor.blueColor()
+    }
 }
