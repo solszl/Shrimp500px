@@ -33,14 +33,14 @@ class AppConfig {
      分割线的颜色
      */
     class func separatorLineColor() -> UIColor {
-        return UIColor.lightGrayColor()
+        return UIColor.colorWithHex(0xE6E6E6)
     }
     
     /**
      未选中文字颜色
      */
     class func unselectedColor() -> UIColor {
-        return UIColor.blackColor()
+        return UIColor.colorWithHex(0x6E6E6E)
     }
     
     /**

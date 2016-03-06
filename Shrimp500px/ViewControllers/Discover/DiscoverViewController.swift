@@ -38,7 +38,7 @@ class DiscoverViewController: BaseViewController {
         self.view.addSubview(categoryBar)
         
         categoryBar.snp_makeConstraints { (make) -> Void in
-            make.size.equalTo(CGSize(width: ScreenWidth, height: 50))
+            make.size.equalTo(CGSize(width: ScreenWidth, height: 43))
             make.left.equalTo(0)
             make.top.equalTo(searchBar.snp_bottom)
         }

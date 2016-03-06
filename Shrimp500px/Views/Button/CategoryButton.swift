@@ -15,7 +15,7 @@ class CategoryButton: UIButton {
         setTitle(title, forState: .Selected)
         setTitleColor(AppConfig.unselectedColor(), forState: .Normal)
         setTitleColor(AppConfig.selectedColor(), forState: .Selected)
-
+        titleLabel?.font = UIFont.systemFontOfSize(14)
     }
 
     required init?(coder aDecoder: NSCoder) {
