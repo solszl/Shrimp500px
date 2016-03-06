@@ -25,8 +25,8 @@ class HomeViewController: BaseViewController {
         tableView.estimatedRowHeight = 100
         
         // 印象笔记的绿色. 模拟一下
-        self.view.backgroundColor = UIColor.fromRGBAInteger(32, green: 192, blue: 92, alpha: 100)
-        tableView.backgroundColor = UIColor.fromRGBAInteger(32, green: 192, blue: 92, alpha: 100)
+        self.view.backgroundColor = UIColor.fromRGBAInteger(red: 32, green: 192, blue: 92)
+        tableView.backgroundColor = UIColor.fromRGBAInteger(red: 32, green: 192, blue: 92)
     }
     
     override func viewDidLoad() {

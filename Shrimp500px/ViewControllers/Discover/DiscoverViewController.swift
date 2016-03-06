@@ -35,6 +35,8 @@ class DiscoverViewController: BaseViewController {
         })
         
         let categoryBar = CategoryBar()
+        categoryBar.data(["照片","画廊","用户"])
+        categoryBar.delegate = self
         self.view.addSubview(categoryBar)
         
         categoryBar.snp_makeConstraints { (make) -> Void in
@@ -61,5 +63,11 @@ extension DiscoverViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+    }
+}
+
+extension DiscoverViewController: CategoryBarDelegate {
+    func categoryBarIndexChange(index: Int) {
+        print("激活第 \(index) 个页签")
     }
 }

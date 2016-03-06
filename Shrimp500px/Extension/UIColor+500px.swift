@@ -18,11 +18,19 @@ extension UIColor {
         return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
     
-    class func fromRGBAInteger(red: Int, green: Int, blue: Int, alpha: Int) -> UIColor {
+    class func fromRGBAInteger(red red: Int, green: Int, blue: Int, alpha: Int = 100) -> UIColor {
         let r = CGFloat(red) / 255.0
         let g = CGFloat(green) / 255.0
         let b = CGFloat(blue) / 255.0
         let a = CGFloat(alpha) / 100.0
         return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
+    
+    class func randomColor() -> UIColor {
+        let r = Int(arc4random() % 255)
+        let g = Int(arc4random() % 255)
+        let b = Int(arc4random() % 255)
+        
+        return UIColor.fromRGBAInteger(red: r, green: g, blue: b)
     }
 }

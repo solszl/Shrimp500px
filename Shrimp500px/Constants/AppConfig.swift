@@ -40,13 +40,14 @@ class AppConfig {
      未选中文字颜色
      */
     class func unselectedColor() -> UIColor {
-        return UIColor.colorWithHex(0x6E6E6E)
+//        return UIColor.colorWithHex(0x5A5A5A)
+        return UIColor.fromRGBAInteger(red: 90, green: 90, blue: 90)
     }
     
     /**
      选中文字颜色
      */
     class func selectedColor() -> UIColor {
-        return UIColor.blueColor()
+        return UIColor.colorWithHex(0x1880D6)
     }
 }
