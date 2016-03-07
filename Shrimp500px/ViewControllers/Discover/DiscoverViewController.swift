@@ -12,6 +12,8 @@ class DiscoverViewController: BaseViewController {
     
     var searchBar: UISearchBar!
     
+    var contentView: ContentView!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         log.warning("discover: step 2")
@@ -22,6 +24,7 @@ class DiscoverViewController: BaseViewController {
         
         log.warning("discover: step 1")
         
+        // 搜索栏
         searchBar = UISearchBar()
         searchBar.searchBarStyle = .Minimal
         searchBar.sizeToFit()
@@ -34,6 +37,7 @@ class DiscoverViewController: BaseViewController {
             make.top.equalTo(20)
         })
         
+        // 页签栏
         let categoryBar = CategoryBar()
         categoryBar.data(["照片","画廊","用户"])
         categoryBar.delegate = self
@@ -43,6 +47,18 @@ class DiscoverViewController: BaseViewController {
             make.size.equalTo(CGSize(width: ScreenWidth, height: 43))
             make.left.equalTo(0)
             make.top.equalTo(searchBar.snp_bottom)
+        }
+        
+        // 内容栏
+        contentView = ContentView()
+        self.view.addSubview(contentView)
+        contentView.backgroundColor = UIColor.randomColor()
+        
+        contentView.snp_makeConstraints { (make) -> Void in
+            make.width.equalTo(ScreenWidth)
+            make.top.equalTo(categoryBar.snp_bottom)
+            make.bottom.equalTo(self.view.snp_bottom).offset(-49)
+            make.leading.equalTo(0)
         }
     }
 }

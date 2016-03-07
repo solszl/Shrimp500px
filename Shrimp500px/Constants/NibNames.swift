@@ -10,5 +10,8 @@ import Foundation
 
 class NibNames {
     static let WorkItemCell: String = "WorkItemCell"
+    
+    // 推荐用户 (发现->用户)
+    static let RecommendUser: String = "RecommendUser"
 }
     

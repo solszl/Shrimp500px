@@ -45,7 +45,10 @@
 		FFA4690B1C8B13790089788D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4690A1C8B13790089788D /* MainTabBarViewController.swift */; };
 		FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */; };
 		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
+		FFD81E011C8DC956004440FB /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD81E001C8DC956004440FB /* UserView.swift */; };
+		FFD81E041C8DCA61004440FB /* RecommendUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD81E031C8DCA61004440FB /* RecommendUser.swift */; };
 		FFDA031F1C817A6000853F22 /* Dictionary+500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDA031E1C817A6000853F22 /* Dictionary+500px.swift */; };
+		FFDD9C521C8D5F28003468B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD9C511C8D5F28003468B3 /* ContentView.swift */; };
 		FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */; };
 		FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */; };
 		FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE9D9AE1C74E97000D5A092 /* LaunchScreen.storyboard */; };
@@ -114,7 +117,10 @@
 		FFA4690A1C8B13790089788D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedCell.swift; sourceTree = "<group>"; };
+		FFD81E001C8DC956004440FB /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		FFD81E031C8DCA61004440FB /* RecommendUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendUser.swift; sourceTree = "<group>"; };
 		FFDA031E1C817A6000853F22 /* Dictionary+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+500px.swift"; sourceTree = "<group>"; };
+		FFDD9C511C8D5F28003468B3 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFE9D9A21C74E97000D5A092 /* Shrimp500px.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp500px.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9D9A51C74E97000D5A092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE9D9AC1C74E97000D5A092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 		FF57B0141C7769DB00E5BF08 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FFD81E021C8DCA47004440FB /* RecommendUser */,
 				FF57B0151C7770C200E5BF08 /* Recommend */,
 				FF57B01A1C7772D300E5BF08 /* Work */,
 				FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */,
@@ -273,7 +280,11 @@
 		FF652DF71C7CE6510067A1C1 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				FFD81DFF1C8DC936004440FB /* UserView */,
+				FFD81DFE1C8DC8E1004440FB /* GalleryView */,
+				FFD81DFD1C8DC8D2004440FB /* PhotoView */,
 				FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */,
+				FFDD9C511C8D5F28003468B3 /* ContentView.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -338,6 +349,36 @@
 				FF7FBE8C1C873061007A7ED9 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FFD81DFD1C8DC8D2004440FB /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PhotoView;
+			sourceTree = "<group>";
+		};
+		FFD81DFE1C8DC8E1004440FB /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GalleryView;
+			sourceTree = "<group>";
+		};
+		FFD81DFF1C8DC936004440FB /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				FFD81E001C8DC956004440FB /* UserView.swift */,
+			);
+			name = UserView;
+			sourceTree = "<group>";
+		};
+		FFD81E021C8DCA47004440FB /* RecommendUser */ = {
+			isa = PBXGroup;
+			children = (
+				FFD81E031C8DCA61004440FB /* RecommendUser.swift */,
+			);
+			name = RecommendUser;
 			sourceTree = "<group>";
 		};
 		FFDA031D1C81774C00853F22 /* Service */ = {
@@ -651,6 +692,7 @@
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
 				FF7FBE961C873F62007A7ED9 /* NetStatus.swift in Sources */,
 				FF7FBE911C873A55007A7ED9 /* GlobalService.swift in Sources */,
+				FFD81E011C8DC956004440FB /* UserView.swift in Sources */,
 				FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */,
@@ -665,11 +707,13 @@
 				FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */,
 				FF789BED1C816A6100501A67 /* Photo.swift in Sources */,
 				FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */,
+				FFDD9C521C8D5F28003468B3 /* ContentView.swift in Sources */,
 				FF7FBE8F1C873719007A7ED9 /* ImageSize.swift in Sources */,
 				FF73500E1C8ABAF80034A721 /* CategoryBar.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
 				FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */,
 				FF3864F31C87DB00009363DA /* BizzComment.swift in Sources */,
+				FFD81E041C8DCA61004440FB /* RecommendUser.swift in Sources */,
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
 				FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */,
 				FF3864F51C87DB1E009363DA /* BizzGallery.swift in Sources */,
