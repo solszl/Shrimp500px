@@ -32,8 +32,11 @@ class RecommendUser: UITableViewCell {
         imgCover.backgroundColor = UIColor.redColor()
 
         imgCover.snp_makeConstraints { (make) -> Void in
-            make.leading.equalTo(10)
-            make.top.equalTo(10)
+            make.height.equalTo(200)
+            make.top.left.equalTo(10)
+            make.bottom.right.equalTo(-10)
+//            make.edges.equalTo(UIEdgeInsets(top: 10, left: 10, bottom: -10, right: -10))
+            
         }
         
         imgCover.image = UIImage(named: "bird")

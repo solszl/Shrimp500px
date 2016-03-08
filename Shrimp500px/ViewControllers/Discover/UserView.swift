@@ -25,9 +25,10 @@ class UserView: UIView {
         
         tableView.registerClass(RecommendUser.self, forCellReuseIdentifier: NibNames.RecommendUser)
         tableView.estimatedRowHeight = 200
-//        tableView.separatorStyle = .None
+        tableView.separatorStyle = .None
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = false
     }
 
     required init?(coder aDecoder: NSCoder) {
