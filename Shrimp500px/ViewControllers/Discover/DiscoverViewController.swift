@@ -60,6 +60,15 @@ class DiscoverViewController: BaseViewController {
             make.bottom.equalTo(self.view.snp_bottom).offset(-49)
             make.leading.equalTo(0)
         }
+        
+        let users = UserView()
+        
+        contentView.addSubview(users)
+        
+        users.snp_makeConstraints { (make) -> Void in
+            make.size.equalTo(contentView)
+            make.center.equalTo(contentView)
+        }
     }
 }
 
