@@ -7,11 +7,17 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct User {
-    var id: Int
-    var username: String
-    var avatar: String
+struct User: Mappable {
+    /// 用户ID
+    var id: Int?
+    
+    /// 用户名
+    var username: String?
+    
+    /// 头像连接
+    var avatar: String?
     
     /// 封面
     var coverURL: String?
@@ -43,10 +49,23 @@ struct User {
     /// 关注了多少人
     var followers_count: Int?
     
-    init(id: Int, username: String, avatar: String) {
-        self.id = id
-        self.username = username
-        self.avatar = avatar
+    init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    mutating func mapping(map: Map) {
+        self.id <- map["id"]
+        self.username <- map["username"]
+        self.firstName <- map["firstname"]
+        self.lastName <- map["lastname"]
+        self.fullname <- map["fullname"]
+        self.photos_count <- map["photos_count"]
+        self.galleries_count <- map["galleries_count"]
+        self.sex <- map["sex"]
+        self.isFollowing <- map["following"]
+        self.friendCount <- map["friends_count"]
+        self.followers_count <- map["followers_count"]
+        
     }
 }
 

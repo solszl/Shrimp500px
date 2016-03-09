@@ -27,6 +27,8 @@
 		FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66BA221C841AF700D9C031 /* MyViewController.swift */; };
 		FF66BA261C841B4300D9C031 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66BA251C841B4300D9C031 /* WebViewController.swift */; };
 		FF66BA281C842EA800D9C031 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = FF66BA271C842EA800D9C031 /* about.html */; };
+		FF6A64211C90153200AFECEB /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A64201C90153200AFECEB /* BorderButton.swift */; };
+		FF6A64231C902A8B00AFECEB /* User2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A64221C902A8B00AFECEB /* User2.swift */; };
 		FF73500E1C8ABAF80034A721 /* CategoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73500D1C8ABAF80034A721 /* CategoryBar.swift */; };
 		FF7350101C8ABBFB0034A721 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73500F1C8ABBFB0034A721 /* SeparatorLine.swift */; };
 		FF7350131C8AC77E0034A721 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7350121C8AC77E0034A721 /* CategoryButton.swift */; };
@@ -99,6 +101,8 @@
 		FF66BA221C841AF700D9C031 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		FF66BA251C841B4300D9C031 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		FF66BA271C842EA800D9C031 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		FF6A64201C90153200AFECEB /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		FF6A64221C902A8B00AFECEB /* User2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User2.swift; sourceTree = "<group>"; };
 		FF73500D1C8ABAF80034A721 /* CategoryBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryBar.swift; sourceTree = "<group>"; };
 		FF73500F1C8ABBFB0034A721 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
 		FF7350121C8AC77E0034A721 /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				FF7350121C8AC77E0034A721 /* CategoryButton.swift */,
+				FF6A64201C90153200AFECEB /* BorderButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				FF789BEC1C816A6100501A67 /* Photo.swift */,
 				FF3864FC1C888D27009363DA /* Photos.swift */,
 				FF7FBE8C1C873061007A7ED9 /* User.swift */,
+				FF6A64221C902A8B00AFECEB /* User2.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 				FF7FBE911C873A55007A7ED9 /* GlobalService.swift in Sources */,
 				FFD81E011C8DC956004440FB /* UserView.swift in Sources */,
 				FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */,
+				FF6A64211C90153200AFECEB /* BorderButton.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */,
 				FF3864F71C87DB33009363DA /* BizzUpload.swift in Sources */,
@@ -717,6 +724,7 @@
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
 				FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */,
 				FF3864F51C87DB1E009363DA /* BizzGallery.swift in Sources */,
+				FF6A64231C902A8B00AFECEB /* User2.swift in Sources */,
 				FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */,
 				FF7FBE981C8759AC007A7ED9 /* BusinessService.swift in Sources */,
 				FF7350101C8ABBFB0034A721 /* SeparatorLine.swift in Sources */,

@@ -27,6 +27,8 @@ let topPadding: CGFloat = 20.0
 
 let bottomPadding: CGFloat = 66.0
 
+let avatarSizeMiddle: CGSize = CGSize(width: 42, height: 42)
+
 class AppConfig {
     
     /**
@@ -49,5 +51,9 @@ class AppConfig {
      */
     class func selectedColor() -> UIColor {
         return UIColor.colorWithHex(0x1880D6)
+    }
+    
+    class func defaultBorderColor() -> UIColor {
+        return UIColor.fromRGBAInteger(red: 22, green: 144, blue: 207)
     }
 }
