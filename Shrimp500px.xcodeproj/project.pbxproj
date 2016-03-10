@@ -246,8 +246,8 @@
 		FF57B0141C7769DB00E5BF08 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FFD81E021C8DCA47004440FB /* RecommendUser */,
 				FF57B0151C7770C200E5BF08 /* Recommend */,
+				FFD81E021C8DCA47004440FB /* RecommendUser */,
 				FF57B01A1C7772D300E5BF08 /* Work */,
 				FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */,
 			);
@@ -284,11 +284,11 @@
 		FF652DF71C7CE6510067A1C1 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				FFD81DFF1C8DC936004440FB /* UserView */,
 				FFD81DFE1C8DC8E1004440FB /* GalleryView */,
 				FFD81DFD1C8DC8D2004440FB /* PhotoView */,
-				FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */,
+				FFD81DFF1C8DC936004440FB /* UserView */,
 				FFDD9C511C8D5F28003468B3 /* ContentView.swift */,
+				FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -339,8 +339,8 @@
 		FF95F0651C85298D00B7FA80 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				FF7350121C8AC77E0034A721 /* CategoryButton.swift */,
 				FF6A64201C90153200AFECEB /* BorderButton.swift */,
+				FF7350121C8AC77E0034A721 /* CategoryButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -361,14 +361,14 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = PhotoView;
+			path = PhotoView;
 			sourceTree = "<group>";
 		};
 		FFD81DFE1C8DC8E1004440FB /* GalleryView */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = GalleryView;
+			path = GalleryView;
 			sourceTree = "<group>";
 		};
 		FFD81DFF1C8DC936004440FB /* UserView */ = {
@@ -376,7 +376,7 @@
 			children = (
 				FFD81E001C8DC956004440FB /* UserView.swift */,
 			);
-			name = UserView;
+			path = UserView;
 			sourceTree = "<group>";
 		};
 		FFD81E021C8DCA47004440FB /* RecommendUser */ = {
@@ -384,7 +384,7 @@
 			children = (
 				FFD81E031C8DCA61004440FB /* RecommendUser.swift */,
 			);
-			name = RecommendUser;
+			path = RecommendUser;
 			sourceTree = "<group>";
 		};
 		FFDA031D1C81774C00853F22 /* Service */ = {
@@ -481,11 +481,11 @@
 		FFE9D9D71C74FD5500D5A092 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FF645AAB1C8CAA7300E33312 /* UIView+Coordinate.swift */,
 				FF27C4711C82072D001B0445 /* Alamofire+SwiftyJSON.swift */,
 				FFDA031E1C817A6000853F22 /* Dictionary+500px.swift */,
 				FFE9D9D81C74FD6E00D5A092 /* UIColor+500px.swift */,
 				FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */,
+				FF645AAB1C8CAA7300E33312 /* UIView+Coordinate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
