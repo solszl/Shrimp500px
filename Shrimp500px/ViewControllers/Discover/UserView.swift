@@ -30,7 +30,7 @@ class UserView: UIView {
         tableView.separatorStyle = .None
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.allowsSelection = false
+        tableView.allowsSelection = false
     }
 
     required init?(coder aDecoder: NSCoder) {

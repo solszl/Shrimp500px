@@ -23,15 +23,28 @@ class RecommendUser: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        let coverW: CGFloat = ScreenWidth - 20
+        let coverH: CGFloat = coverW * 0.6
+        self.backgroundColor = UIColor.fromRGBAInteger(red: 243, green: 243, blue: 248)
+        
+        let con = UIView()
+        con.layer.backgroundColor = UIColor.whiteColor().CGColor
+        con.layer.borderColor = UIColor.lightGrayColor().CGColor
+        con.layer.borderWidth = 0.5
+        self.contentView.addSubview(con)
+        
+        con.snp_makeConstraints { (make) -> Void in
+            make.size.equalTo(CGSize(width: coverW, height: coverW))
+            make.leading.top.equalTo(10)
+        }
+        
         // 用户封面
         imgCover = UIImageView()
         self.contentView.addSubview(imgCover)
         imgCover.contentMode = .ScaleAspectFill
         imgCover.clipsToBounds = true
         imgCover.backgroundColor = UIColor.redColor()
-
-        let coverW: CGFloat = ScreenWidth - 20
-        let coverH: CGFloat = coverW * 0.6
         
         imgCover.snp_makeConstraints { (make) -> Void in
             make.leading.top.equalTo(10)
@@ -87,7 +100,6 @@ class RecommendUser: UITableViewCell {
             make.bottom.equalTo(-10)
             make.width.equalTo(56)
         }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
