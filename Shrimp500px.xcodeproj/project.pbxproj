@@ -27,14 +27,18 @@
 		FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66BA221C841AF700D9C031 /* MyViewController.swift */; };
 		FF66BA261C841B4300D9C031 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66BA251C841B4300D9C031 /* WebViewController.swift */; };
 		FF66BA281C842EA800D9C031 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = FF66BA271C842EA800D9C031 /* about.html */; };
+		FF689A511C92622E00F53F42 /* CarouselItemRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF689A501C92622E00F53F42 /* CarouselItemRender.swift */; };
+		FF689A531C931BEF00F53F42 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF689A521C931BEF00F53F42 /* Gallery.swift */; };
+		FF689A551C931CA200F53F42 /* Galleries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF689A541C931CA200F53F42 /* Galleries.swift */; };
+		FF689A581C932FEE00F53F42 /* Consuming.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF689A561C932FEE00F53F42 /* Consuming.swift */; };
+		FF689A591C932FEE00F53F42 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF689A571C932FEE00F53F42 /* CarouselView.swift */; };
+		FF689A5B1C93307D00F53F42 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF689A5A1C93307D00F53F42 /* GalleryView.swift */; };
 		FF6A64211C90153200AFECEB /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A64201C90153200AFECEB /* BorderButton.swift */; };
 		FF6A64231C902A8B00AFECEB /* User2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A64221C902A8B00AFECEB /* User2.swift */; };
 		FF73500E1C8ABAF80034A721 /* CategoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73500D1C8ABAF80034A721 /* CategoryBar.swift */; };
 		FF7350101C8ABBFB0034A721 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73500F1C8ABBFB0034A721 /* SeparatorLine.swift */; };
 		FF7350131C8AC77E0034A721 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7350121C8AC77E0034A721 /* CategoryButton.swift */; };
 		FF765CB31C7822BD00A54A77 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF765CB21C7822BD00A54A77 /* NibNames.swift */; };
-		FF766CF61C915E2E0026C738 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF766CF51C915E2E0026C738 /* GalleryView.swift */; };
-		FF766CF81C917EE10026C738 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF766CF71C917EE10026C738 /* CarouselView.swift */; };
 		FF789BED1C816A6100501A67 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF789BEC1C816A6100501A67 /* Photo.swift */; };
 		FF7FBE8D1C873062007A7ED9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE8C1C873061007A7ED9 /* User.swift */; };
 		FF7FBE8F1C873719007A7ED9 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE8E1C873719007A7ED9 /* ImageSize.swift */; };
@@ -103,14 +107,18 @@
 		FF66BA221C841AF700D9C031 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		FF66BA251C841B4300D9C031 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		FF66BA271C842EA800D9C031 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		FF689A501C92622E00F53F42 /* CarouselItemRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemRender.swift; sourceTree = "<group>"; };
+		FF689A521C931BEF00F53F42 /* Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		FF689A541C931CA200F53F42 /* Galleries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Galleries.swift; sourceTree = "<group>"; };
+		FF689A561C932FEE00F53F42 /* Consuming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consuming.swift; sourceTree = "<group>"; };
+		FF689A571C932FEE00F53F42 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		FF689A5A1C93307D00F53F42 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FF6A64201C90153200AFECEB /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 		FF6A64221C902A8B00AFECEB /* User2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User2.swift; sourceTree = "<group>"; };
 		FF73500D1C8ABAF80034A721 /* CategoryBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryBar.swift; sourceTree = "<group>"; };
 		FF73500F1C8ABBFB0034A721 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
 		FF7350121C8AC77E0034A721 /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		FF765CB21C7822BD00A54A77 /* NibNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
-		FF766CF51C915E2E0026C738 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		FF766CF71C917EE10026C738 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FF789BEC1C816A6100501A67 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FF7FBE8C1C873061007A7ED9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF7FBE8E1C873719007A7ED9 /* ImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
@@ -357,6 +365,8 @@
 				FF3864FC1C888D27009363DA /* Photos.swift */,
 				FF7FBE8C1C873061007A7ED9 /* User.swift */,
 				FF6A64221C902A8B00AFECEB /* User2.swift */,
+				FF689A521C931BEF00F53F42 /* Gallery.swift */,
+				FF689A541C931CA200F53F42 /* Galleries.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,8 +381,10 @@
 		FFD81DFE1C8DC8E1004440FB /* GalleryView */ = {
 			isa = PBXGroup;
 			children = (
-				FF766CF71C917EE10026C738 /* CarouselView.swift */,
-				FF766CF51C915E2E0026C738 /* GalleryView.swift */,
+				FF689A5A1C93307D00F53F42 /* GalleryView.swift */,
+				FF689A561C932FEE00F53F42 /* Consuming.swift */,
+				FF689A571C932FEE00F53F42 /* CarouselView.swift */,
+				FF689A501C92622E00F53F42 /* CarouselItemRender.swift */,
 			);
 			path = GalleryView;
 			sourceTree = "<group>";
@@ -707,22 +719,27 @@
 				FFD81E011C8DC956004440FB /* UserView.swift in Sources */,
 				FF27C4721C82072D001B0445 /* Alamofire+SwiftyJSON.swift in Sources */,
 				FF6A64211C90153200AFECEB /* BorderButton.swift in Sources */,
+				FF689A511C92622E00F53F42 /* CarouselItemRender.swift in Sources */,
 				FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */,
 				FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */,
 				FF3864F71C87DB33009363DA /* BizzUpload.swift in Sources */,
 				FFDA031F1C817A6000853F22 /* Dictionary+500px.swift in Sources */,
 				FF57B0101C7756C700E5BF08 /* BaseViewController.swift in Sources */,
+				FF689A5B1C93307D00F53F42 /* GalleryView.swift in Sources */,
 				FF3864FB1C881AC3009363DA /* Router.swift in Sources */,
 				FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */,
 				FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */,
 				FFA4690B1C8B13790089788D /* MainTabBarViewController.swift in Sources */,
+				FF689A591C932FEE00F53F42 /* CarouselView.swift in Sources */,
 				FF3864EF1C87DABF009363DA /* BizzPhoto.swift in Sources */,
 				FF2481611C7CD7E800F20344 /* SplashViewController.swift in Sources */,
 				FF789BED1C816A6100501A67 /* Photo.swift in Sources */,
 				FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */,
+				FF689A531C931BEF00F53F42 /* Gallery.swift in Sources */,
+				FF689A581C932FEE00F53F42 /* Consuming.swift in Sources */,
 				FFDD9C521C8D5F28003468B3 /* ContentView.swift in Sources */,
 				FF7FBE8F1C873719007A7ED9 /* ImageSize.swift in Sources */,
-				FF766CF81C917EE10026C738 /* CarouselView.swift in Sources */,
+				FF689A551C931CA200F53F42 /* Galleries.swift in Sources */,
 				FF73500E1C8ABAF80034A721 /* CategoryBar.swift in Sources */,
 				FFE9D9A61C74E97000D5A092 /* AppDelegate.swift in Sources */,
 				FFE9D9D61C74EE6800D5A092 /* SHTabBarControllerViewController.swift in Sources */,
@@ -731,7 +748,6 @@
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
 				FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */,
 				FF3864F51C87DB1E009363DA /* BizzGallery.swift in Sources */,
-				FF766CF61C915E2E0026C738 /* GalleryView.swift in Sources */,
 				FF6A64231C902A8B00AFECEB /* User2.swift in Sources */,
 				FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */,
 				FF7FBE981C8759AC007A7ED9 /* BusinessService.swift in Sources */,

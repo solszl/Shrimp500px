@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct User: Mappable {
+struct User: Mappable, Equatable {
     /// 用户ID
     var id: Int?
     
@@ -72,4 +72,8 @@ struct User: Mappable {
 private enum Sex:Int {
     case Female = 0
     case Male = 1
+}
+
+func ==(lhs: User, rhs: User) -> Bool {
+    return lhs.id == rhs.id
 }
