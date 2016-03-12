@@ -61,19 +61,19 @@ class DiscoverViewController: BaseViewController {
             make.leading.equalTo(0)
         }
         
-//        let users = UserView()
-//        contentView.addSubview(users)
-//        users.snp_makeConstraints { (make) -> Void in
-//            make.size.equalTo(contentView)
-//            make.center.equalTo(contentView)
-//        }
-        
-        let gallery = GalleryView()
-        contentView.addSubview(gallery)
-        gallery.snp_makeConstraints { (make) -> Void in
+        let users = UserView()
+        contentView.addSubview(users)
+        users.snp_makeConstraints { (make) -> Void in
             make.size.equalTo(contentView)
             make.center.equalTo(contentView)
         }
+        
+//        let gallery = GalleryView()
+//        contentView.addSubview(gallery)
+//        gallery.snp_makeConstraints { (make) -> Void in
+//            make.size.equalTo(contentView)
+//            make.center.equalTo(contentView)
+//        }
     }
 }
 

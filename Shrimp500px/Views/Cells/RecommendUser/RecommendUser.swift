@@ -110,7 +110,7 @@ class RecommendUser: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configWithUserData(data: User2) {
+    func configWithUserData(data: User) {
         imgCover.image = UIImage(named: "bird")
         imgAvatar.image = UIImage(named: "avatar")
         lblFullname.text = "其貌不扬\(arc4random() % 10)"

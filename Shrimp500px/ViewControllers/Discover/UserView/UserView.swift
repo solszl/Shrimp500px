@@ -13,6 +13,8 @@ class UserView: UIView {
     
     let user = User2(id: 10000, username: "Sol", avatar: "11")
     
+    var userVM = UserViewModel()
+    
     override init(frame: CGRect) {
         
         tableView = UITableView()
@@ -31,6 +33,7 @@ class UserView: UIView {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelection = false
+        userVM.fetchNewUser()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -42,14 +45,14 @@ class UserView: UIView {
 
 extension UserView: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return userVM.data.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(NibNames.RecommendUser) as! RecommendUser
         
-        cell.configWithUserData(user)
+        cell.configWithUserData(userVM.data[indexPath.row] as! User)
         
         return cell
     }
@@ -58,7 +61,7 @@ extension UserView: UITableViewDataSource {
         let h = tableView.fd_heightForCellWithIdentifier(NibNames.RecommendUser) { (obj) -> Void in
             let cell = obj as! RecommendUser
             
-            cell.configWithUserData(self.user)
+            cell.configWithUserData(self.userVM.data[indexPath.row] as! User)
         }
         
         print(h)

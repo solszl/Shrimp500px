@@ -46,6 +46,12 @@
 		FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */; };
 		FF7FBE961C873F62007A7ED9 /* NetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE951C873F62007A7ED9 /* NetStatus.swift */; };
 		FF7FBE981C8759AC007A7ED9 /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBE971C8759AC007A7ED9 /* BusinessService.swift */; };
+		FF8161C41C94252A00555A62 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8161C31C94252A00555A62 /* UserViewModel.swift */; };
+		FF8161CB1C9436FB00555A62 /* Galleries_bottom.json in Resources */ = {isa = PBXBuildFile; fileRef = FF8161C71C9436FB00555A62 /* Galleries_bottom.json */; };
+		FF8161CC1C9436FB00555A62 /* Galleries_middle.json in Resources */ = {isa = PBXBuildFile; fileRef = FF8161C81C9436FB00555A62 /* Galleries_middle.json */; };
+		FF8161CD1C9436FB00555A62 /* Galleries_top.json in Resources */ = {isa = PBXBuildFile; fileRef = FF8161C91C9436FB00555A62 /* Galleries_top.json */; };
+		FF8161CE1C9436FB00555A62 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = FF8161CA1C9436FB00555A62 /* Users.json */; };
+		FF8161D01C946A5E00555A62 /* RecommendUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8161CF1C946A5E00555A62 /* RecommendUserInfo.swift */; };
 		FF8F31921C7C0BB700A5FE55 /* HomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */; };
 		FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */; };
 		FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */; };
@@ -126,6 +132,12 @@
 		FF7FBE931C873CA1007A7ED9 /* NetWorkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkService.swift; sourceTree = "<group>"; };
 		FF7FBE951C873F62007A7ED9 /* NetStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetStatus.swift; sourceTree = "<group>"; };
 		FF7FBE971C8759AC007A7ED9 /* BusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessService.swift; sourceTree = "<group>"; };
+		FF8161C31C94252A00555A62 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		FF8161C71C9436FB00555A62 /* Galleries_bottom.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Galleries_bottom.json; sourceTree = "<group>"; };
+		FF8161C81C9436FB00555A62 /* Galleries_middle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Galleries_middle.json; sourceTree = "<group>"; };
+		FF8161C91C9436FB00555A62 /* Galleries_top.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Galleries_top.json; sourceTree = "<group>"; };
+		FF8161CA1C9436FB00555A62 /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		FF8161CF1C946A5E00555A62 /* RecommendUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendUserInfo.swift; sourceTree = "<group>"; };
 		FF8F31911C7C0BB700A5FE55 /* HomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLayout.swift; sourceTree = "<group>"; };
 		FF95F0661C8543A600B7FA80 /* UITableViewCell+500px.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+500px.swift"; sourceTree = "<group>"; };
 		FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompsAvatar.swift; sourceTree = "<group>"; };
@@ -348,6 +360,25 @@
 			path = NetWork;
 			sourceTree = "<group>";
 		};
+		FF8161C51C9436FB00555A62 /* localData */ = {
+			isa = PBXGroup;
+			children = (
+				FF8161C61C9436FB00555A62 /* gallery */,
+				FF8161CA1C9436FB00555A62 /* Users.json */,
+			);
+			path = localData;
+			sourceTree = "<group>";
+		};
+		FF8161C61C9436FB00555A62 /* gallery */ = {
+			isa = PBXGroup;
+			children = (
+				FF8161C71C9436FB00555A62 /* Galleries_bottom.json */,
+				FF8161C81C9436FB00555A62 /* Galleries_middle.json */,
+				FF8161C91C9436FB00555A62 /* Galleries_top.json */,
+			);
+			path = gallery;
+			sourceTree = "<group>";
+		};
 		FF95F0651C85298D00B7FA80 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,13 +391,14 @@
 		FFAA5FE71C80C496000F4E60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FF689A541C931CA200F53F42 /* Galleries.swift */,
+				FF689A521C931BEF00F53F42 /* Gallery.swift */,
 				FF7FBE8E1C873719007A7ED9 /* ImageSize.swift */,
 				FF789BEC1C816A6100501A67 /* Photo.swift */,
 				FF3864FC1C888D27009363DA /* Photos.swift */,
+				FF8161CF1C946A5E00555A62 /* RecommendUserInfo.swift */,
 				FF7FBE8C1C873061007A7ED9 /* User.swift */,
 				FF6A64221C902A8B00AFECEB /* User2.swift */,
-				FF689A521C931BEF00F53F42 /* Gallery.swift */,
-				FF689A541C931CA200F53F42 /* Galleries.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,10 +413,10 @@
 		FFD81DFE1C8DC8E1004440FB /* GalleryView */ = {
 			isa = PBXGroup;
 			children = (
-				FF689A5A1C93307D00F53F42 /* GalleryView.swift */,
-				FF689A561C932FEE00F53F42 /* Consuming.swift */,
-				FF689A571C932FEE00F53F42 /* CarouselView.swift */,
 				FF689A501C92622E00F53F42 /* CarouselItemRender.swift */,
+				FF689A571C932FEE00F53F42 /* CarouselView.swift */,
+				FF689A561C932FEE00F53F42 /* Consuming.swift */,
+				FF689A5A1C93307D00F53F42 /* GalleryView.swift */,
 			);
 			path = GalleryView;
 			sourceTree = "<group>";
@@ -393,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				FFD81E001C8DC956004440FB /* UserView.swift */,
+				FF8161C31C94252A00555A62 /* UserViewModel.swift */,
 			);
 			path = UserView;
 			sourceTree = "<group>";
@@ -511,6 +544,7 @@
 		FFF8FFA51C7E3610002AF08E /* support */ = {
 			isa = PBXGroup;
 			children = (
+				FF8161C51C9436FB00555A62 /* localData */,
 				FFF8FFA61C7E36DE002AF08E /* Shrimp500px-Bridging-Header.h */,
 				FF66BA271C842EA800D9C031 /* about.html */,
 			);
@@ -628,9 +662,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE9D9B01C74E97000D5A092 /* LaunchScreen.storyboard in Resources */,
+				FF8161CC1C9436FB00555A62 /* Galleries_middle.json in Resources */,
 				FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */,
 				FF66BA281C842EA800D9C031 /* about.html in Resources */,
+				FF8161CE1C9436FB00555A62 /* Users.json in Resources */,
 				FFE9D9AD1C74E97000D5A092 /* Assets.xcassets in Resources */,
+				FF8161CD1C9436FB00555A62 /* Galleries_top.json in Resources */,
+				FF8161CB1C9436FB00555A62 /* Galleries_bottom.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +750,7 @@
 				FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */,
 				FF7350131C8AC77E0034A721 /* CategoryButton.swift in Sources */,
 				FF3864F11C87DAD4009363DA /* BizzCollection.swift in Sources */,
+				FF8161C41C94252A00555A62 /* UserViewModel.swift in Sources */,
 				FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */,
 				FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */,
 				FF7FBE961C873F62007A7ED9 /* NetStatus.swift in Sources */,
@@ -729,6 +768,7 @@
 				FF3864FB1C881AC3009363DA /* Router.swift in Sources */,
 				FFF8FFA21C7E05EA002AF08E /* WorkItemCell.swift in Sources */,
 				FF7FBE941C873CA1007A7ED9 /* NetWorkService.swift in Sources */,
+				FF8161D01C946A5E00555A62 /* RecommendUserInfo.swift in Sources */,
 				FFA4690B1C8B13790089788D /* MainTabBarViewController.swift in Sources */,
 				FF689A591C932FEE00F53F42 /* CarouselView.swift in Sources */,
 				FF3864EF1C87DABF009363DA /* BizzPhoto.swift in Sources */,
