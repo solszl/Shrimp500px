@@ -10,7 +10,7 @@ import Foundation
 
 class UserViewModel {
     
-    var data: NSMutableArray = []
+    var data: [RecommendUserInfo] = []
     
     let bizz: BizzUser = BizzUser()
     
@@ -20,7 +20,8 @@ class UserViewModel {
     
     func fetchNewUser(callback:(()->Void)? = nil) {
         bizz.fatchRecommendUser { (userList, error) -> Void in
-            
+            self.data = userList!
+            callback!()
         }
     }
 }

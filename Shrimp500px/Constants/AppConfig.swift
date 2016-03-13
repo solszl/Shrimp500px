@@ -27,7 +27,7 @@ let topPadding: CGFloat = 20.0
 
 let bottomPadding: CGFloat = 66.0
 
-let avatarSizeMiddle: CGSize = CGSize(width: 42, height: 42)
+let avatarSizeMiddle: CGSize = CGSize(width: 60, height: 60)
 
 class AppConfig {
     

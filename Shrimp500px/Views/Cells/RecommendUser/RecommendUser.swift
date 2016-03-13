@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class RecommendUser: UITableViewCell {
 
@@ -28,23 +29,12 @@ class RecommendUser: UITableViewCell {
         let coverH: CGFloat = coverW * 0.6
         self.backgroundColor = UIColor.fromRGBAInteger(red: 243, green: 243, blue: 248)
         
-        let con = UIView()
-        con.layer.backgroundColor = UIColor.whiteColor().CGColor
-        con.layer.borderColor = UIColor.lightGrayColor().CGColor
-        con.layer.borderWidth = 0.5
-        self.contentView.addSubview(con)
-        
-        con.snp_makeConstraints { (make) -> Void in
-            make.size.equalTo(CGSize(width: coverW, height: coverW))
-            make.leading.top.equalTo(10)
-        }
-        
         // 用户封面
         imgCover = UIImageView()
         self.contentView.addSubview(imgCover)
         imgCover.contentMode = .ScaleAspectFill
         imgCover.clipsToBounds = true
-        imgCover.backgroundColor = UIColor.redColor()
+        imgCover.backgroundColor = UIColor.lightGrayColor()
         
         imgCover.snp_makeConstraints { (make) -> Void in
             make.leading.top.equalTo(10)
@@ -53,10 +43,25 @@ class RecommendUser: UITableViewCell {
 
         }
         
+        // 下面组件的容器
+        let con = UIView()
+        con.layer.backgroundColor = UIColor.whiteColor().CGColor
+        con.layer.borderColor = UIColor.lightGrayColor().CGColor
+        con.layer.borderWidth = 0.5
+        self.contentView.addSubview(con)
+        
+        con.snp_makeConstraints { (make) -> Void in
+            make.width.equalTo(coverW)
+            make.height.equalTo(coverW * 0.4)
+            make.top.equalTo(imgCover.snp_bottom).offset(-1)
+            make.leading.equalTo(10)
+            make.bottom.equalTo(0)
+        }
+        
         imgAvatar = UIImageView()
         self.contentView.addSubview(imgAvatar)
         self.imgAvatar.clipsToBounds = true
-        self.imgAvatar.layer.cornerRadius = 21
+        self.imgAvatar.layer.cornerRadius = 30
 
         self.imgAvatar.snp_makeConstraints { (make) -> Void in
             make.size.equalTo(avatarSizeMiddle)
@@ -65,25 +70,26 @@ class RecommendUser: UITableViewCell {
         }
         
         lblFullname = UILabel()
-        self.contentView.addSubview(lblFullname)
+        con.addSubview(lblFullname)
         self.lblFullname.textAlignment = .Center
         self.lblFullname.textColor = UIColor.darkGrayColor()
+        self.lblFullname.font = UIFont.systemFontOfSize(18)
         
         lblFullname.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(imgAvatar.snp_bottom).offset(10)
-            make.width.equalTo(contentView.snp_width)
+            make.top.equalTo(con).offset(34)
+            make.width.equalTo(con.snp_width)
             make.centerX.equalTo(imgAvatar.snp_centerX)
         }
         
         lblFollowers = UILabel()
-        self.contentView.addSubview(lblFollowers)
+        con.addSubview(lblFollowers)
         self.lblFollowers.textAlignment = .Center
         self.lblFollowers.textColor = UIColor.lightGrayColor()
         self.lblFollowers.font = UIFont.systemFontOfSize(12)
         
         lblFollowers.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(lblFullname.snp_bottom).offset(8)
-            make.width.equalTo(contentView.snp_width)
+            make.width.equalTo(con.snp_width)
             make.centerX.equalTo(lblFullname.snp_centerX)
         }
         
@@ -92,12 +98,12 @@ class RecommendUser: UITableViewCell {
         btnFollow.titleLabel?.font = UIFont.systemFontOfSize(14)
         btnFollow.setTitleColor(UIColor.fromRGBAInteger(red: 22, green: 144, blue: 207), forState: .Normal)
         btnFollow.borderWidth = 1.5
-        self.contentView.addSubview(btnFollow)
+        con.addSubview(btnFollow)
         
         btnFollow.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(self.lblFollowers.snp_bottom).offset(10)
-            make.centerX.equalTo(self.contentView.snp_centerX)
-            make.bottom.equalTo(-10)
+            make.top.equalTo(self.lblFollowers.snp_bottom).offset(8)
+            make.centerX.equalTo(con.snp_centerX)
+            make.bottom.equalTo(con).offset(-10)
             make.width.equalTo(56)
         }
     }
@@ -110,10 +116,10 @@ class RecommendUser: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configWithUserData(data: User) {
-        imgCover.image = UIImage(named: "bird")
-        imgAvatar.image = UIImage(named: "avatar")
-        lblFullname.text = "其貌不扬\(arc4random() % 10)"
-        lblFollowers.text = "粉丝: \(arc4random() % 10000)"
+    func configWithUserData(data: RecommendUserInfo) {
+        imgCover.kf_setImageWithURL(NSURL(string: data.coverPicUrl!)!)
+        imgAvatar.kf_setImageWithURL(NSURL(string: data.avatar!)!)
+        lblFullname.text = data.fullName //"其貌不扬\(arc4random() % 10)"
+        lblFollowers.text = "粉丝: \(data.followerCount!)"//"粉丝: \(arc4random() % 10000)"
     }
 }

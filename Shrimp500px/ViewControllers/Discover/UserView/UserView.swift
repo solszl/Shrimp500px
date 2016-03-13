@@ -28,12 +28,14 @@ class UserView: UIView {
         }
         
         tableView.registerClass(RecommendUser.self, forCellReuseIdentifier: NibNames.RecommendUser)
-        tableView.estimatedRowHeight = 240
+        tableView.estimatedRowHeight = ScreenWidth - 20
         tableView.separatorStyle = .None
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelection = false
-        userVM.fetchNewUser()
+        userVM.fetchNewUser() {
+            self.tableView.reloadData()
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -52,7 +54,7 @@ extension UserView: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(NibNames.RecommendUser) as! RecommendUser
         
-        cell.configWithUserData(userVM.data[indexPath.row] as! User)
+        cell.configWithUserData(userVM.data[indexPath.row] )
         
         return cell
     }
@@ -61,7 +63,7 @@ extension UserView: UITableViewDataSource {
         let h = tableView.fd_heightForCellWithIdentifier(NibNames.RecommendUser) { (obj) -> Void in
             let cell = obj as! RecommendUser
             
-            cell.configWithUserData(self.userVM.data[indexPath.row] as! User)
+            cell.configWithUserData(self.userVM.data[indexPath.row] )
         }
         
         print(h)
