@@ -11,51 +11,43 @@ import UIKit
 
 class GalleryView: UIView {
 
-    lazy var carouselView: CarouselView! = {
+//    lazy var carouselView: CarouselView! = {
+//    
+//        let carousel = CarouselView()
+//        return carousel
+//    }()
     
-        let carousel = CarouselView()
-        carousel.run = true
-        carousel.viewDataSource = self
-        carousel.viewDelegate = self
-        return carousel
-    }()
-    
+    var circleView: CarouselView!
     override init(frame: CGRect) {        
         super.init(frame: frame)
         
-        self.addSubview(carouselView)
-        carouselView.backgroundColor = UIColor.whiteColor()
-        carouselView.snp_makeConstraints { (make) -> Void in
+//        self.addSubview(carouselView)
+        
+        
+        
+        let imageArray: [UIImage!] = [UIImage(named: "09"), UIImage(named: "12"), UIImage(named: "11")]
+        
+        self.circleView = CarouselView(frame: CGRectMake(0, 64, ScreenWidth, 200), imageArray: imageArray)
+        circleView.backgroundColor = UIColor.orangeColor()
+        circleView.delegate = self
+        self.addSubview(circleView)
+        circleView.backgroundColor = UIColor.whiteColor()
+        circleView.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(ScreenWidth)
             make.height.equalTo(200)
+
         }
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }
 
-extension GalleryView: CarouselDataSource {
-    func numOfViews() -> Int {
-        return 5
-    }
-    func carouselView(carouselView: CarouselView, viewIndex: Int) -> UIView {
-        
-//        let render = CarouselItemRender()
-//        return render
-        let v = UIView()
-//        v.snp_makeConstraints { (make) -> Void in
-//            make.size.equalTo(carouselView)
-//            make.center.equalTo(carouselView)
-//        }
-//        v.backgroundColor = UIColor.randomColor()
-        return v
-    }
-}
-
-extension GalleryView: CarouselDelegate {
-    func carouselView(view: CarouselView, touched index: Int) {
-        print("touched \(index)")
+extension GalleryView: CirCleViewDelegate {
+    func clickCurrentImage(currentIndxe: Int) {
+        print(currentIndxe, terminator: "");
     }
 }
