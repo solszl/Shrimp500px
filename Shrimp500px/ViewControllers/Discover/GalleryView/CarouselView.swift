@@ -24,8 +24,6 @@ class CarouselView: UIView, UIScrollViewDelegate {
         */
         didSet {
             contentScrollView.scrollEnabled = !(imageArray.count == 1)
-            self.pageIndicator.frame = CGRectMake(self.frame.size.width - 20 * CGFloat(imageArray.count), self.frame.size.height - 30, 20 * CGFloat(imageArray.count), 20)
-            self.pageIndicator?.numberOfPages = self.imageArray.count
             self.setScrollViewOfImage()
         }
     }
@@ -51,18 +49,11 @@ class CarouselView: UIView, UIScrollViewDelegate {
     
     var delegate: CirCleViewDelegate?
     
-    var indexOfCurrentImage: Int!  {                // 当前显示的第几张图片
-        //监听显示的第几张图片，来更新分页指示器
-        didSet {
-            self.pageIndicator.currentPage = indexOfCurrentImage
-        }
-    }
+    var indexOfCurrentImage: Int!
     
     var currentImageView:   UIImageView!
     var lastImageView:      UIImageView!
     var nextImageView:      UIImageView!
-    
-    var pageIndicator:      UIPageControl!          //页数指示器
     
     var timer:              NSTimer?                //计时器
     
@@ -124,13 +115,6 @@ class CarouselView: UIView, UIScrollViewDelegate {
         
         self.setScrollViewOfImage()
         contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
-        
-        //设置分页指示器
-        self.pageIndicator = UIPageControl(frame: CGRectMake(self.frame.size.width - 20 * CGFloat(imageArray.count), self.frame.size.height - 30, 20 * CGFloat(imageArray.count), 20))
-        pageIndicator.hidesForSinglePage = true
-        pageIndicator.numberOfPages = imageArray.count
-        pageIndicator.backgroundColor = UIColor.clearColor()
-        self.addSubview(pageIndicator)
         
         //设置计时器
         self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)

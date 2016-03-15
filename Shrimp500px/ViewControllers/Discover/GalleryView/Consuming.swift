@@ -16,7 +16,7 @@ class Consuming: NSObject {
     class func carousel(view: CarouselView, status: ()->Bool) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
             repeat{
-                view.nextPage()
+//                view.nextPage()
                 NSThread.sleepForTimeInterval(3)
             }while(status())
         }
