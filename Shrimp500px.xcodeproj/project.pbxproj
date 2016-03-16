@@ -22,6 +22,7 @@
 		FF57B0121C77572600E5BF08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B0111C77572600E5BF08 /* HomeViewController.swift */; };
 		FF57B0211C7773D400E5BF08 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */; };
 		FF57B0221C7773D400E5BF08 /* RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF57B0201C7773D400E5BF08 /* RecommendCell.xib */; };
+		FF5946721C99A3DC00B53A12 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5946711C99A3DC00B53A12 /* GalleryViewModel.swift */; };
 		FF645AAC1C8CAA7300E33312 /* UIView+Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF645AAB1C8CAA7300E33312 /* UIView+Coordinate.swift */; };
 		FF652DF91C7CE6700067A1C1 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */; };
 		FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66BA221C841AF700D9C031 /* MyViewController.swift */; };
@@ -108,6 +109,7 @@
 		FF57B0111C77572600E5BF08 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF57B01F1C7773D400E5BF08 /* RecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		FF57B0201C7773D400E5BF08 /* RecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCell.xib; sourceTree = "<group>"; };
+		FF5946711C99A3DC00B53A12 /* GalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		FF645AAB1C8CAA7300E33312 /* UIView+Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Coordinate.swift"; sourceTree = "<group>"; };
 		FF652DF81C7CE6700067A1C1 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		FF66BA221C841AF700D9C031 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				FF689A571C932FEE00F53F42 /* CarouselView.swift */,
 				FF689A561C932FEE00F53F42 /* Consuming.swift */,
 				FF689A5A1C93307D00F53F42 /* GalleryView.swift */,
+				FF5946711C99A3DC00B53A12 /* GalleryViewModel.swift */,
 			);
 			path = GalleryView;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 				FF645AAC1C8CAA7300E33312 /* UIView+Coordinate.swift in Sources */,
 				FF3864F91C87DB44009363DA /* BizzUser.swift in Sources */,
 				FF95F0671C8543A600B7FA80 /* UITableViewCell+500px.swift in Sources */,
+				FF5946721C99A3DC00B53A12 /* GalleryViewModel.swift in Sources */,
 				FF7350131C8AC77E0034A721 /* CategoryButton.swift in Sources */,
 				FF3864F11C87DAD4009363DA /* BizzCollection.swift in Sources */,
 				FF8161C41C94252A00555A62 /* UserViewModel.swift in Sources */,
