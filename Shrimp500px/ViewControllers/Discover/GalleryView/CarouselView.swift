@@ -58,6 +58,10 @@ class CarouselView: UIView, UIScrollViewDelegate {
     var timer:              NSTimer?                //计时器
     
     
+    var lastItem: CarouselItemRender!
+    var middleItem: CarouselItemRender!
+    var nextItem: CarouselItemRender!
+    
     /*********************************** Begin ****************************************/
     //MARK:- Begin
     override init(frame: CGRect) {
@@ -118,6 +122,26 @@ class CarouselView: UIView, UIScrollViewDelegate {
         
         //设置计时器
         self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        
+        self.middleItem = CarouselItemRender()
+        self.middleItem.userInteractionEnabled = true
+        self.middleItem.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)
+        self.contentScrollView.addSubview(middleItem)
+        
+        self.lastItem = CarouselItemRender()
+        self.lastItem.userInteractionEnabled = true
+        self.lastItem.frame = CGRectMake(0, 0, self.frame.size.width, 200)
+        self.contentScrollView.addSubview(lastItem)
+        
+        self.nextItem = CarouselItemRender()
+        self.nextImageView.userInteractionEnabled = true
+        self.nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
+        self.contentScrollView.addSubview(nextItem)
+        
+        //添加点击事件
+//        let imageTap = UITapGestureRecognizer(target: self, action: Selector("imageTapAction:"))
+//        currentImageView.addGestureRecognizer(imageTap)
+
     }
     
     //MARK: 设置图片
@@ -213,3 +237,8 @@ class CarouselView: UIView, UIScrollViewDelegate {
      */
     optional func clickCurrentImage(currentIndxe: Int)
 }
+
+
+//extension CarouselView: UIScrollViewDelegate {
+//    
+//}
