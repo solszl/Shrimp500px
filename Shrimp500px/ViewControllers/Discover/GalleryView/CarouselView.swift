@@ -62,6 +62,10 @@ class CarouselView: UIView, UIScrollViewDelegate {
     var middleItem: CarouselItemRender!
     var nextItem: CarouselItemRender!
     
+    var data: [Gallery]!
+    
+    var currentIndex: Int = 0
+    
     /*********************************** Begin ****************************************/
     //MARK:- Begin
     override init(frame: CGRect) {
@@ -149,6 +153,35 @@ class CarouselView: UIView, UIScrollViewDelegate {
         self.currentImageView.image = self.imageArray[self.indexOfCurrentImage]
         self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
         self.lastImageView.image = self.imageArray[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
+        
+        guard let _ = data else {
+            //
+            print("data is null")
+            return
+        }
+        
+        self.middleItem.setData(data[self.currentIndex])
+        self.nextItem.setData(data[nextIndex()])
+        self.lastItem.setData(data[previousIndex()])
+        
+    }
+    
+    private func nextIndex() -> Int {
+        
+        let tempIndex = self.currentIndex + 1
+        guard tempIndex < self.data.count else {
+            return self.data.count
+        }
+        return tempIndex
+    }
+    
+    private func previousIndex() -> Int {
+        
+        let tempIndex = self.currentIndex - 1
+        guard tempIndex >= 0 else {
+            return 0
+        }
+        return tempIndex
     }
     
     // 得到上一张图片的下标

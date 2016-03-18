@@ -33,7 +33,7 @@ class CarouselItemRender: UIView {
     }
     
     func setData(data: Gallery) {
-        
+        self.imgPicture.kf_setImageWithURL(NSURL(string: data.coverPhoto![0].url!)!)
     }
     
     

@@ -23,6 +23,14 @@ class GalleryViewModel {
         bizz.fatchGalleryByType(type) {
             data, error in
             print(type, data?.count)
+            switch type {
+            case .Editor:
+                self.editorData = data
+            case .Fresh:
+                self.freshData = data
+            case .Popular:
+                self.popularData = data
+            }
         }
     }
 }

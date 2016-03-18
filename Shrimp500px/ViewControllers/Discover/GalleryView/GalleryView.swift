@@ -18,12 +18,13 @@ class GalleryView: UIView {
 //    }()
     
     var circleView: CarouselView!
+    
+    let galleryVM = GalleryViewModel()
+    
     override init(frame: CGRect) {        
         super.init(frame: frame)
-        
-//        self.addSubview(carouselView)
-        
-        
+
+        galleryVM.fatchGalleryByType(.Editor)
         
         let imageArray: [UIImage!] = [UIImage(named: "09"), UIImage(named: "12"), UIImage(named: "11")]
         
@@ -35,8 +36,9 @@ class GalleryView: UIView {
         circleView.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(ScreenWidth)
             make.height.equalTo(200)
-
         }
+        
+        circleView.data = galleryVM.editorData
     }
 
     required init?(coder aDecoder: NSCoder) {

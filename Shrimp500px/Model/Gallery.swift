@@ -41,6 +41,8 @@ struct Gallery: Mappable, Equatable {
     
     var editorChoice: Bool?
     
+    var coverPhoto: [CoverPhoto]?
+    
     init?(_ map: Map) {
         mapping(map)
     }
@@ -61,9 +63,41 @@ struct Gallery: Mappable, Equatable {
         self.user <- map["user"]
         self.customPath <- map["custom_path"]
         self.editorChoice <- map["editors_choice"]
+        self.coverPhoto <- map["cover_photo"]
+    }
+}
+
+struct CoverPhoto:Mappable, Equatable {
+    var id: Int?
+    
+    var size: Int?
+    
+    var url: String?
+    
+    var nsfw: Bool?
+    
+    var width: CGFloat?
+    
+    var height: CGFloat?
+    
+    init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    mutating func mapping(map: Map) {
+        self.id <- map["id"]
+        self.size <- map["size"]
+        self.url <- map["url"]
+        self.nsfw <- map["nsfw"]
+        self.width <- map["width"]
+        self.height <- map["height"]
     }
 }
 
 func ==(lhs: Gallery, rhs: Gallery) -> Bool {
     return lhs.id == rhs.id
+}
+
+func ==(lhs: CoverPhoto, rhs: CoverPhoto) -> Bool {
+    return lhs.url == rhs.url
 }
