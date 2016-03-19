@@ -170,7 +170,8 @@ class CarouselView: UIView, UIScrollViewDelegate {
         
         let tempIndex = self.currentIndex + 1
         guard tempIndex < self.data.count else {
-            return self.data.count
+
+            return 0//self.data.count - 1
         }
         return tempIndex
     }
@@ -179,7 +180,7 @@ class CarouselView: UIView, UIScrollViewDelegate {
         
         let tempIndex = self.currentIndex - 1
         guard tempIndex >= 0 else {
-            return 0
+            return self.data.count - 1 //0
         }
         return tempIndex
     }
@@ -236,8 +237,11 @@ class CarouselView: UIView, UIScrollViewDelegate {
         let offset = scrollView.contentOffset.x
         if offset == 0 {
             self.indexOfCurrentImage = self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
+            self.currentIndex = self.previousIndex()
         }else if offset == self.frame.size.width * 2 {
             self.indexOfCurrentImage = self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
+            
+            self.currentIndex = self.nextIndex()
         }
         // 重新布局图片
         self.setScrollViewOfImage()
