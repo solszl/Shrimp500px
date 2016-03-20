@@ -5,6 +5,7 @@
 //  Copyright © 2016年 papa.studio. All rights reserved.
 //
 import UIKit
+import SnapKit
 
 let TimeInterval = 2.5          //全局的时间间隔
 
@@ -28,32 +29,9 @@ class CarouselView: UIView, UIScrollViewDelegate {
         }
     }
     
-    var urlImageArray: [String]? {
-        willSet(newValue) {
-            self.urlImageArray = newValue
-        }
-        
-        didSet {
-            //这里用了强制拆包，所以不要把urlImageArray设为nil
-            for urlStr in self.urlImageArray! {
-                let urlImage = NSURL(string: urlStr)
-                if urlImage == nil { break }
-                let dataImage = NSData(contentsOfURL: urlImage!)
-                if dataImage == nil { break }
-                let tempImage = UIImage(data: dataImage!)
-                if tempImage == nil { break }
-                imageArray.append(tempImage)
-            }
-        }
-    }
-    
     var delegate: CirCleViewDelegate?
     
     var indexOfCurrentImage: Int!
-    
-    var currentImageView:   UIImageView!
-    var lastImageView:      UIImageView!
-    var nextImageView:      UIImageView!
     
     var timer:              NSTimer?                //计时器
     
@@ -70,17 +48,12 @@ class CarouselView: UIView, UIScrollViewDelegate {
     //MARK:- Begin
     override init(frame: CGRect) {
         super.init(frame: frame)
-    }
-    
-    convenience init(frame: CGRect, imageArray: [UIImage!]?) {
-        self.init(frame: frame)
-        self.imageArray = imageArray
-        
+        data = []
         // 默认显示第一张图片
         self.indexOfCurrentImage = 0
         self.setUpCircleView()
     }
-    
+ 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -88,41 +61,21 @@ class CarouselView: UIView, UIScrollViewDelegate {
     /********************************** Privite Methods ***************************************/
      //MARK:- Privite Methods
     private func setUpCircleView() {
-        self.contentScrollView = UIScrollView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
-        contentScrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 0)
+        self.contentScrollView = UIScrollView()
+        contentScrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 200)
         contentScrollView.delegate = self
         contentScrollView.bounces = false
         contentScrollView.pagingEnabled = true
         contentScrollView.backgroundColor = UIColor.greenColor()
         contentScrollView.showsHorizontalScrollIndicator = false
-        contentScrollView.scrollEnabled = !(imageArray.count == 1)
+        contentScrollView.scrollEnabled = !(data.count == 1)
         self.addSubview(contentScrollView)
         
-        self.currentImageView = UIImageView()
-        currentImageView.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)
-        currentImageView.userInteractionEnabled = true
-        currentImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        currentImageView.clipsToBounds = true
-        contentScrollView.addSubview(currentImageView)
-        
-        //添加点击事件
-        let imageTap = UITapGestureRecognizer(target: self, action: Selector("imageTapAction:"))
-        currentImageView.addGestureRecognizer(imageTap)
-        
-        self.lastImageView = UIImageView()
-        lastImageView.frame = CGRectMake(0, 0, self.frame.size.width, 200)
-        lastImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        lastImageView.clipsToBounds = true
-        contentScrollView.addSubview(lastImageView)
-        
-        self.nextImageView = UIImageView()
-        nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
-        nextImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        nextImageView.clipsToBounds = true
-        contentScrollView.addSubview(nextImageView)
-        
-        self.setScrollViewOfImage()
-        contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        self.contentScrollView.snp_makeConstraints { (make) -> Void in
+            make.size.equalTo(CGSize(width: ScreenWidth, height: 200))
+            make.leading.top.equalTo(0)
+        }
+
         
         //设置计时器
         self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
@@ -138,23 +91,21 @@ class CarouselView: UIView, UIScrollViewDelegate {
         self.contentScrollView.addSubview(lastItem)
         
         self.nextItem = CarouselItemRender()
-        self.nextImageView.userInteractionEnabled = true
-        self.nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
+        self.nextItem.userInteractionEnabled = true
+        self.nextItem.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
         self.contentScrollView.addSubview(nextItem)
         
         //添加点击事件
 //        let imageTap = UITapGestureRecognizer(target: self, action: Selector("imageTapAction:"))
-//        currentImageView.addGestureRecognizer(imageTap)
-
+//        middleItem.addGestureRecognizer(imageTap)
+        
+        self.setScrollViewOfImage()
+        contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
     }
     
     //MARK: 设置图片
-    private func setScrollViewOfImage(){
-        self.currentImageView.image = self.imageArray[self.indexOfCurrentImage]
-        self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
-        self.lastImageView.image = self.imageArray[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
-        
-        guard let _ = data else {
+    private func setScrollViewOfImage(){      
+        guard data.count != 0 else {
             //
             print("data is null")
             return
@@ -183,23 +134,6 @@ class CarouselView: UIView, UIScrollViewDelegate {
             return self.data.count - 1 //0
         }
         return tempIndex
-    }
-    
-    // 得到上一张图片的下标
-    private func getLastImageIndex(indexOfCurrentImage index: Int) -> Int{
-        let tempIndex = index - 1
-        if tempIndex == -1 {
-            return self.imageArray.count - 1
-        }else{
-            return tempIndex
-        }
-    }
-    
-    // 得到下一张图片的下标
-    private func getNextImageIndex(indexOfCurrentImage index: Int) -> Int
-    {
-        let tempIndex = index + 1
-        return tempIndex < self.imageArray.count ? tempIndex : 0
     }
     
     //事件触发方法
@@ -236,10 +170,8 @@ class CarouselView: UIView, UIScrollViewDelegate {
         
         let offset = scrollView.contentOffset.x
         if offset == 0 {
-            self.indexOfCurrentImage = self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
             self.currentIndex = self.previousIndex()
         }else if offset == self.frame.size.width * 2 {
-            self.indexOfCurrentImage = self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
             
             self.currentIndex = self.nextIndex()
         }

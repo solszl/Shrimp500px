@@ -11,8 +11,6 @@ import UIKit
 class UserView: UIView {
     var tableView: UITableView!
     
-    let user = User2(id: 10000, username: "Sol", avatar: "11")
-    
     var userVM = UserViewModel()
     
     override init(frame: CGRect) {

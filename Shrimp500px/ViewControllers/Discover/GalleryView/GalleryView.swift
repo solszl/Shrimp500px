@@ -10,12 +10,6 @@ import Foundation
 import UIKit
 
 class GalleryView: UIView {
-
-//    lazy var carouselView: CarouselView! = {
-//    
-//        let carousel = CarouselView()
-//        return carousel
-//    }()
     
     var circleView: CarouselView!
     
@@ -26,16 +20,13 @@ class GalleryView: UIView {
 
         galleryVM.fatchGalleryByType(.Editor)
         
-        let imageArray: [UIImage!] = [UIImage(named: "09"), UIImage(named: "12"), UIImage(named: "11")]
-        
-        self.circleView = CarouselView(frame: CGRectMake(0, 64, ScreenWidth, 200), imageArray: imageArray)
-        circleView.backgroundColor = UIColor.orangeColor()
+        self.circleView = CarouselView()
         circleView.delegate = self
         self.addSubview(circleView)
-        circleView.backgroundColor = UIColor.whiteColor()
         circleView.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(ScreenWidth)
             make.height.equalTo(200)
+            make.leading.top.trailing.equalTo(0)
         }
         
         circleView.data = galleryVM.editorData
