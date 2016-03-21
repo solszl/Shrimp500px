@@ -22,9 +22,6 @@ class CarouselItemRender: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.backgroundColor = UIColor.randomColor()
-        
         makeUI()
     }
 
@@ -33,7 +30,8 @@ class CarouselItemRender: UIView {
     }
     
     func setData(data: Gallery) {
-        self.imgPicture.kf_setImageWithURL(NSURL(string: data.coverPhoto![0].url!)!)
+        self.imgPicture.kf_setImageWithURL(NSURL(string: data.coverPhoto![1].url!)!)
+        self.lblPersonName.text = data.user?.firstName
     }
     
     
@@ -41,9 +39,10 @@ class CarouselItemRender: UIView {
         // 背景图
         self.imgPicture = UIImageView()
         self.addSubview(self.imgPicture)
-        
+        self.imgPicture.contentMode = .ScaleAspectFill
+        self.imgPicture.clipsToBounds = true
         self.imgPicture?.snp_makeConstraints(closure: { (make) -> Void in
-            make.size.equalTo(CGSize(width: ScreenWidth, height: 200.0))
+            make.size.equalTo(CGSize(width: ScreenWidth, height: 150.0))
             make.center.equalTo(self)
         })
         
@@ -53,7 +52,6 @@ class CarouselItemRender: UIView {
         self.lblPersonName.textAlignment = .Center
         self.lblPersonName.textColor = UIColor.lightGrayColor()
         self.addSubview(lblPersonName)
-        
         self.lblPersonName.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(ScreenWidth)
             make.center.equalTo(self)

@@ -61,38 +61,31 @@ class CarouselView: UIView, UIScrollViewDelegate {
     /********************************** Privite Methods ***************************************/
      //MARK:- Privite Methods
     private func setUpCircleView() {
-        self.contentScrollView = UIScrollView()
-        contentScrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 200)
+        self.contentScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
+        contentScrollView.contentSize = CGSizeMake(ScreenWidth * 3, 150)
         contentScrollView.delegate = self
         contentScrollView.bounces = false
         contentScrollView.pagingEnabled = true
-        contentScrollView.backgroundColor = UIColor.greenColor()
         contentScrollView.showsHorizontalScrollIndicator = false
         contentScrollView.scrollEnabled = !(data.count == 1)
         self.addSubview(contentScrollView)
-        
-        self.contentScrollView.snp_makeConstraints { (make) -> Void in
-            make.size.equalTo(CGSize(width: ScreenWidth, height: 200))
-            make.leading.top.equalTo(0)
-        }
-
         
         //设置计时器
         self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
         
         self.middleItem = CarouselItemRender()
         self.middleItem.userInteractionEnabled = true
-        self.middleItem.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)
+        self.middleItem.frame = CGRectMake(ScreenWidth, 0, ScreenWidth, 150)
         self.contentScrollView.addSubview(middleItem)
         
         self.lastItem = CarouselItemRender()
         self.lastItem.userInteractionEnabled = true
-        self.lastItem.frame = CGRectMake(0, 0, self.frame.size.width, 200)
+        self.lastItem.frame = CGRectMake(0, 0, ScreenWidth, 150)
         self.contentScrollView.addSubview(lastItem)
         
         self.nextItem = CarouselItemRender()
         self.nextItem.userInteractionEnabled = true
-        self.nextItem.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
+        self.nextItem.frame = CGRectMake(ScreenWidth * 2, 0, ScreenWidth, 150)
         self.contentScrollView.addSubview(nextItem)
         
         //添加点击事件
@@ -100,7 +93,7 @@ class CarouselView: UIView, UIScrollViewDelegate {
 //        middleItem.addGestureRecognizer(imageTap)
         
         self.setScrollViewOfImage()
-        contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        contentScrollView.setContentOffset(CGPointMake(ScreenWidth, 0), animated: false)
     }
     
     //MARK: 设置图片
@@ -139,7 +132,7 @@ class CarouselView: UIView, UIScrollViewDelegate {
     //事件触发方法
     func timerAction() {
         print("timer", terminator: "")
-        contentScrollView.setContentOffset(CGPointMake(self.frame.size.width*2, 0), animated: true)
+        contentScrollView.setContentOffset(CGPointMake(ScreenWidth*2, 0), animated: true)
     }
     
     
@@ -171,14 +164,14 @@ class CarouselView: UIView, UIScrollViewDelegate {
         let offset = scrollView.contentOffset.x
         if offset == 0 {
             self.currentIndex = self.previousIndex()
-        }else if offset == self.frame.size.width * 2 {
+        }else if offset == ScreenWidth * 2 {
             
             self.currentIndex = self.nextIndex()
         }
         // 重新布局图片
         self.setScrollViewOfImage()
         //布局后把contentOffset设为中间
-        scrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        scrollView.setContentOffset(CGPointMake(ScreenWidth, 0), animated: false)
         
         //重置计时器
         if timer == nil {
