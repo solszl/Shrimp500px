@@ -7,8 +7,6 @@
 import UIKit
 import SnapKit
 
-let TimeInterval = 2.5          //全局的时间间隔
-
 class CarouselView: UIView, UIScrollViewDelegate {
     /*********************************** Property ****************************************/
      //MARK:- Property
@@ -31,11 +29,6 @@ class CarouselView: UIView, UIScrollViewDelegate {
     
     var delegate: CirCleViewDelegate?
     
-    var indexOfCurrentImage: Int!
-    
-    var timer:              NSTimer?                //计时器
-    
-    
     var lastItem: CarouselItemRender!
     var middleItem: CarouselItemRender!
     var nextItem: CarouselItemRender!
@@ -44,13 +37,21 @@ class CarouselView: UIView, UIScrollViewDelegate {
     
     var currentIndex: Int = 0
     
+    var run: Bool! = false {
+        didSet {
+            if oldValue == false && self.run == true {
+                Consuming.carousel(self, status: { () -> Bool in
+                    return self.run
+                })
+            }
+        }
+    }
+    
     /*********************************** Begin ****************************************/
     //MARK:- Begin
     override init(frame: CGRect) {
         super.init(frame: frame)
         data = []
-        // 默认显示第一张图片
-        self.indexOfCurrentImage = 0
         self.setUpCircleView()
     }
  
@@ -69,9 +70,6 @@ class CarouselView: UIView, UIScrollViewDelegate {
         contentScrollView.showsHorizontalScrollIndicator = false
         contentScrollView.scrollEnabled = !(data.count == 1)
         self.addSubview(contentScrollView)
-        
-        //设置计时器
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         self.middleItem = CarouselItemRender()
         self.middleItem.userInteractionEnabled = true
@@ -129,17 +127,11 @@ class CarouselView: UIView, UIScrollViewDelegate {
         return tempIndex
     }
     
-    //事件触发方法
-    func timerAction() {
-        print("timer", terminator: "")
-        contentScrollView.setContentOffset(CGPointMake(ScreenWidth*2, 0), animated: true)
-    }
-    
     
     /********************************** Public Methods  ***************************************/
      //MARK:- Public Methods
     func imageTapAction(tap: UITapGestureRecognizer){
-        self.delegate?.clickCurrentImage!(indexOfCurrentImage)
+//        self.delegate?.clickCurrentImage!(indexOfCurrentImage)
     }
     
     
@@ -147,8 +139,7 @@ class CarouselView: UIView, UIScrollViewDelegate {
      //MARK:- Delegate Methods
      //MARK: UIScrollViewDelegate
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        timer?.invalidate()
-        timer = nil
+        self.run = false
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -157,6 +148,8 @@ class CarouselView: UIView, UIScrollViewDelegate {
         if !decelerate {
             self.scrollViewDidEndDecelerating(scrollView)
         }
+        
+        self.run = true
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
@@ -173,16 +166,17 @@ class CarouselView: UIView, UIScrollViewDelegate {
         //布局后把contentOffset设为中间
         scrollView.setContentOffset(CGPointMake(ScreenWidth, 0), animated: false)
         
-        //重置计时器
-        if timer == nil {
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: #selector(CarouselView.timerAction), userInfo: nil, repeats: true)
-        }
+//        self.run = true
     }
     
     //时间触发器 设置滑动时动画true，会触发的方法
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
         print("animator", terminator: "")
         self.scrollViewDidEndDecelerating(contentScrollView)
+    }
+    
+    func nextPage() {
+        contentScrollView.setContentOffset(CGPointMake(ScreenWidth*2, 0), animated: true)
     }
     
 }
@@ -199,8 +193,3 @@ class CarouselView: UIView, UIScrollViewDelegate {
      */
     optional func clickCurrentImage(currentIndxe: Int)
 }
-
-
-//extension CarouselView: UIScrollViewDelegate {
-//    
-//}

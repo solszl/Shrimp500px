@@ -30,6 +30,7 @@ class GalleryView: UIView {
         }
         
         circleView.data = galleryVM.editorData
+        circleView.run = true
     }
 
     required init?(coder aDecoder: NSCoder) {
