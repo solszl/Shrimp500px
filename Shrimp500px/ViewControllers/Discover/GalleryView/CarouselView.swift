@@ -71,7 +71,7 @@ class CarouselView: UIView, UIScrollViewDelegate {
         self.addSubview(contentScrollView)
         
         //设置计时器
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         self.middleItem = CarouselItemRender()
         self.middleItem.userInteractionEnabled = true
@@ -175,7 +175,7 @@ class CarouselView: UIView, UIScrollViewDelegate {
         
         //重置计时器
         if timer == nil {
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: #selector(CarouselView.timerAction), userInfo: nil, repeats: true)
         }
     }
     

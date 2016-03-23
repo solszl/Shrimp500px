@@ -74,8 +74,7 @@ class CategoryBar: UIView {
         
         let len = array.count
         var preButton: CategoryButton?
-        
-        for (index, title) in EnumerateSequence(array) {
+        for (index, title) in array.enumerate() {
             let btn = CategoryButton(title: title)
             // 区分边界
 //            btn.backgroundColor = UIColor.randomColor()
@@ -83,7 +82,7 @@ class CategoryBar: UIView {
             
             // 创建一个tag标识.为了之后点击按钮过后动画移动
             btn.tag = index
-            btn.addTarget(self, action: "buttonClick:", forControlEvents: .TouchUpInside)
+            btn.addTarget(self, action: #selector(buttonClick), forControlEvents: .TouchUpInside)
             
             btn.snp_makeConstraints(closure: { (make) -> Void in
                 make.width.equalTo(self.snp_width).dividedBy(len)

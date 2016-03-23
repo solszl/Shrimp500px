@@ -33,7 +33,7 @@ class WebViewController: OAuthWebViewController {
         
         self.webView.frame = ScreenBounds
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancel")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(cancel))
         
         let url = NSBundle.mainBundle().URLForResource("about", withExtension:"html")
         let myRequest = NSURLRequest(URL: url!);

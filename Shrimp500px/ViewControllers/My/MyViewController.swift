@@ -22,7 +22,7 @@ class MyViewController: BaseViewController {
         btnLogin = UIButton()
         btnLogin.setTitle("Login", forState: .Normal)
         btnLogin.setTitleColor(UIColor.redColor(), forState: .Normal)
-        btnLogin.addTarget(self, action: "btnLoginClick:", forControlEvents: .TouchUpInside)
+        btnLogin.addTarget(self, action: #selector(btnLoginClick), forControlEvents: .TouchUpInside)
         self.view.addSubview(btnLogin)
         btnLogin.snp_makeConstraints { make in
             make.size.equalTo(self.view.snp_size)
