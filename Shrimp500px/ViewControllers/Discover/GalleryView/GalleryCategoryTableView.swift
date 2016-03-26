@@ -8,31 +8,6 @@
 
 import UIKit
 
-class GalleryCategoryTableView: UITableView {
+class GalleryCategoryTableView: UICollectionView {
     
-}
-
-extension GalleryCategoryTableView: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
-}
-
-extension GalleryCategoryTableView: UITableViewDelegate {
-    
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell = tableView.dequeueReusableCellWithIdentifier("") as! GalleryHeaderView
-        
-        return headerCell
-    }
 }

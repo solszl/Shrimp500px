@@ -34,6 +34,7 @@ class GalleryView: UIView {
     }
     
     private func makeUI() {
+        
         self.circleView = CarouselView()
         circleView.delegate = self
         self.addSubview(circleView)
@@ -45,9 +46,21 @@ class GalleryView: UIView {
         
         circleView.data = galleryVM.editorData
         circleView.run = true
+
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 8
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        layout.headerReferenceSize = CGSizeMake(0, 5)
+
         
-        self.recommondView = GalleryCategoryTableView()
+        self.recommondView = GalleryCategoryTableView(frame: CGRectZero, collectionViewLayout: layout)
         self.recommondView.backgroundColor = UIColor.redColor()
+        self.recommondView.dataSource = self
+        self.recommondView.delegate = self
+        self.recommondView.registerClass(GalleryRecommendItemRender.self, forCellWithReuseIdentifier: "GalleryRecommendItemRender")
+        // 注册一个Header
+        self.recommondView.registerClass(GalleryHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "GalleryHeaderView")
         self.addSubview(recommondView)
         
         self.recommondView.snp_makeConstraints { (make) in
@@ -63,4 +76,36 @@ extension GalleryView: CirCleViewDelegate {
     func clickCurrentImage(currentIndxe: Int) {
         print(currentIndxe, terminator: "");
     }
+}
+
+extension GalleryView: UICollectionViewDataSource {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GalleryRecommendItemRender", forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.randomColor()
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        if indexPath.section == 0 && kind == UICollectionElementKindSectionHeader {
+            let headView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "GalleryHeaderView", forIndexPath: indexPath) as! GalleryHeaderView
+            headView.setData(indexPath.row)
+            return headView
+        }
+        
+        return UICollectionReusableView()
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+}
+
+extension GalleryView: UICollectionViewDelegate {
+    
 }

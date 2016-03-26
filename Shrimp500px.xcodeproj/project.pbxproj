@@ -60,6 +60,7 @@
 		FF95F0691C85455F00B7FA80 /* CompsAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */; };
 		FF9F66CA1C78A8F0001BFAC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */; };
 		FFA4690B1C8B13790089788D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4690A1C8B13790089788D /* MainTabBarViewController.swift */; };
+		FFA9F19F1CA6520F00C4D64B /* GalleryRecommendItemRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA9F19E1CA6520F00C4D64B /* GalleryRecommendItemRender.swift */; };
 		FFAA5FE61C80B2BB000F4E60 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */; };
 		FFBC11B11C7CABC40040D53E /* CustomizedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */; };
 		FFD81E011C8DC956004440FB /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD81E001C8DC956004440FB /* UserView.swift */; };
@@ -149,6 +150,7 @@
 		FF95F0681C85455F00B7FA80 /* CompsAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompsAvatar.swift; sourceTree = "<group>"; };
 		FF9F66C91C78A8F0001BFAC7 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		FFA4690A1C8B13790089788D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		FFA9F19E1CA6520F00C4D64B /* GalleryRecommendItemRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRecommendItemRender.swift; sourceTree = "<group>"; };
 		FFAA5FE51C80B2BB000F4E60 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		FFBC11AF1C7CABC40040D53E /* CustomizedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedCell.swift; sourceTree = "<group>"; };
 		FFD81E001C8DC956004440FB /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				FF689A5A1C93307D00F53F42 /* GalleryView.swift */,
 				FF5946711C99A3DC00B53A12 /* GalleryViewModel.swift */,
 				FF2690B51CA4435000AE48BE /* GalleryCategoryTableView.swift */,
+				FFA9F19E1CA6520F00C4D64B /* GalleryRecommendItemRender.swift */,
 			);
 			path = GalleryView;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				FF3864F31C87DB00009363DA /* BizzComment.swift in Sources */,
 				FFD81E041C8DCA61004440FB /* RecommendUser.swift in Sources */,
 				FFE9D9D91C74FD6E00D5A092 /* UIColor+500px.swift in Sources */,
+				FFA9F19F1CA6520F00C4D64B /* GalleryRecommendItemRender.swift in Sources */,
 				FF66BA231C841AF700D9C031 /* MyViewController.swift in Sources */,
 				FF3864F51C87DB1E009363DA /* BizzGallery.swift in Sources */,
 				FF6A64231C902A8B00AFECEB /* User2.swift in Sources */,

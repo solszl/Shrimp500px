@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryHeaderView: UITableViewCell {
+class GalleryHeaderView: UICollectionReusableView {
     
     var imgIcon: UIImageView!
     
@@ -18,8 +18,17 @@ class GalleryHeaderView: UITableViewCell {
     
     var btnViewAll: UIButton!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    var data: [HeaderData]!{
+        var result: [HeaderData] = []
+        result.append(HeaderData(icon: 1, title: "当红", subTitle: "Popular right now", type: .Popular))
+        result.append(HeaderData(icon: 2, title: "新", subTitle: "来自社区的最新画廊", type: .Fresh))
+        return result
+    }
+    
+    private var type: GalleryType?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         makeUI()
     }
@@ -62,6 +71,7 @@ class GalleryHeaderView: UITableViewCell {
         
         // 全部按钮
         btnViewAll = UIButton()
+        btnViewAll.titleLabel?.text = "全部"
         self.addSubview(btnViewAll)
         
         self.btnViewAll.snp_makeConstraints { (make) in
@@ -69,4 +79,24 @@ class GalleryHeaderView: UITableViewCell {
             make.trailing.equalTo(self).offset(-3)
         }
     }
+    
+    func setData(index: Int) {
+        guard index < self.data?.count && index >= 0 else {
+            return
+        }
+        
+        let data = self.data[index]
+        
+        imgIcon.kf_setImageWithURL(NSURL(string: "avatar")!, placeholderImage: nil)
+        lblTitle.text = data.title
+        lblSubtitle.text = data.subTitle
+        type = data.type
+    }
+}
+
+struct HeaderData {
+    var icon: Int
+    var title: String
+    var subTitle: String
+    var type: GalleryType
 }
